@@ -1,0 +1,4 @@
+* Introduction
+  This is a [Hakyll](https://jaspervdj.be/hakyll/tutorials.html)
+  website for some of my type theory related notes. Coq, Agda, Idris,
+  theory, or whatever.
