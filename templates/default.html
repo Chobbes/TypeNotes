@@ -1,32 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>My Hakyll Blog - $title$</title>
-        <link rel="stylesheet" href="/css/default.css" />
-    </head>
-    <body>
-        <div id="header">
-            <div id="logo">
-                <a href="/">Types of Note</a>
-            </div>
-            <div id="navigation">
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/archive.html">Archive</a>
-            </div>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Types of Note - $title$</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/syntax.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item $if(home)$active$endif$" href="/">Home</a>
+          <a class="blog-nav-item $if(about)$active$endif$" href="/about.html">About</a>
+          <a class="blog-nav-item $if(contact)$active$endif$" href="/contact.html">Contact</a>
+          <a class="blog-nav-item $if(archive)$active$endif$" href="/archive.html">Archive</a>
+	  <a class="blog-nav-item" href="/rss.xml">RSS</a>
+	  <a class="blog-nav-item" href="/atom.xml">ATOM</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-sm-13 blog-main">
+	  $body$
         </div>
 
-        <div id="content">
-            <h1>$title$</h1>
-            $body$
-        </div>
+      </div><!-- /.row -->
 
-        <div id="footer">
-            A <a href="http://jaspervdj.be/hakyll">Hakyll</a> site about types. Source <a href="https://github.com/Chobbes/TypeNotes">here</a>, contributions welcome!
-        </div>
-    </body>
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+      <p>Copyright © 2017<a href="/about.html">Calvin Beck</a></p>
+
+    </div>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript"
+	    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/docs.min.js"></script>
+
+  </body>
 </html>

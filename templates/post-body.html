@@ -1,0 +1,9 @@
+<h2 class="blog-post-title"><a href="$url$">$title$</a></h2>
+<p class="blog-post-meta">Posted on $date$ $if(author)$ by <a href="#">$author$</a> $endif$
+$if(tags)$ <br> Tags: $tags$ $endif$ </p>
+
+  $if(teaser)$
+      $teaser$
+  $else$
+      $body$
+  $endif$

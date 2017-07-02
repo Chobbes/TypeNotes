@@ -1,0 +1,175 @@
+---
+title: Coq Cheat Sheet
+date: 2017-07-01
+author: Calvin Beck
+tags: coq, tactics, theorem proving, proofs
+---
+
+* intros
+
+  Introduces variables and hypothesis. This takes them out of the goal
+  and puts them in the context.
+
+* reflexivity
+
+  Does reflexivity. If a goal has ~x = y~ it will try to simplify (by
+  normalization) both ~x~ and ~y~. If their normal forms are
+  syntactically identical, then this tactic will succeed and the goal
+  will be completed.
+
+  E.g.,
+
+  #+BEGIN_SRC coq
+    1 + 1 = 2
+  #+END_SRC
+
+  Reflexivity will solve this because ~1 + 1~ will evaluate to ~2~,
+  and ~2 = 2~ is obviously true because each side of the equality is
+  syntactically identical.
+
+* simpl
+
+  Attempts to simplify the goal. This essentially just evaluates to
+  weak head normal form. Useful for seeing next steps in a proof (hard
+  to unwind definitions in your head sometimes), and it can be used to
+  facilitate rewrites.
+
+  #+BEGIN_SRC coq
+    1 + 1 = 2
+  #+END_SRC
+
+  ~simpl~ will transform this to ~2 = 2~.
+
+* rewrite
+
+  When we have ~x = y~ it can be used to replace ~x~ with ~y~ in a
+  goal, or vice versa.
+
+  #+BEGIN_SRC coq
+  H : x = y
+  =========
+  x = y
+  #+END_SRC
+
+  Then ~rewrite H~ will leave us with the goal ~y = y~, and
+  ~rewrite <- H~ will leave us with ~x = x~.
+
+* apply
+
+  Used to solve a goal by applying a theorem which has an identical
+  conclusion to the current goal. Any hypothesis of the theorem will
+  be added to the context.
+
+  This tactic can also be used on hypothesis in the context which then
+  matches on the hypothesis of the theorem being applied and gives you
+  a hypothesis in the context matching the goal of the theorem being
+  applied.
+
+  #+BEGIN_SRC coq
+  H : x = y
+  =========
+  x = y
+  #+END_SRC
+
+  ~apply H~ will solve the goal.
+
+  #+BEGIN_SRC coq
+  H : x = y -> y = z
+  H0 : x = y
+  ==================
+  y = z
+  #+END_SRC
+
+  You could solve this in two ways with ~apply~:
+
+  - ~apply H~ will use the theorem ~H~ to show that ~y = z~ if ~x =
+    y~, so it leaves you with ~x = y~ in your goal. This can then be
+    solved by applying ~H0~.
+  - ~apply H in H0~ will use ~H : x = y -> y = z~ to transform ~H0 : x
+    = y~ to ~y = z~. After this we can apply ~H0~ to our goal.
+
+* symmetry
+
+  Reverses an equality. Using ~symmetry~ will flip ~x = y~ to ~y = x~.
+
+  This is useful for when you need to ~apply~ a theorem, but the goal
+  is in a different order than the theorem.
+
+* destruct
+
+  The ~destruct~ tactic is used to perform case analysis in Coq. It
+  will break a possible value into all cases for that type (one for
+  each constructor of the type). This gives you multiple goals to
+  prove; one for each constructor.
+  
+* induction
+
+  The ~induction~ tactic is very similar to ~destruct~, except that it
+  brings an induction hypothesis into the context for recursive data
+  types.
+
+* inversion
+
+  ~inversion~ provides reasoning with constructors taking into account
+  the fact that constructors are injective and disjoint.
+
+  - Injective: for a constructor ~A~, ~A x = A y~ means that ~x = y~ as well.
+  - Disjoint: If you have two constructors ~A~ and ~B~, then you know that ~A~ does not equal ~B~
+
+  Thus the inversion tactic has several uses.
+
+** Injective usage
+
+  #+BEGIN_SRC coq
+  H : A x = A y
+  =============
+  x = y
+  #+END_SRC
+
+  When using ~inversion in H~ this gives us a new hypothesis, ~H1~.
+
+  #+BEGIN_SRC coq
+  H : A x = A y
+  H1 : x = y
+  =============
+  y = y
+  #+END_SRC
+
+  It will also perform rewrites with the new hypothesis automatically,
+  so our goal changed to ~y = y~ as well, since it rewrote ~x~ with
+  ~y~ using the new hypothesis ~H1~.
+
+  Inversion will apply this injective reasoning across multiple
+  arguments in a constructor, and even recursively. So, if you have
+  lists of three items that are equal you will get a hypothesis
+  representing the equality of each item in the first list, with the
+  equivalent item in the second list.
+
+  We can name the equations as well.
+
+  ~inversion in H as [Hxy]~ will give:
+
+  #+BEGIN_SRC coq
+  H : A x = A y
+  Hxy : x = y
+  =============
+  y = y
+  #+END_SRC
+
+** Disjoint usage
+
+   If we have values constructed with two different constructors ~A~
+   and ~B~, then we know that the values must be different. So if we
+   have a hypothesis in the context with disjoint constructors, like
+   so:
+
+   #+BEGIN_SRC coq
+   H: A x = B y
+   ============
+   false = true
+   #+END_SRC
+
+   We can use ~inversion H~ which will conclude that ~H~ is a false
+   hypothesis, and since we have a contradiction in our set of
+   assumptions we may conclude the goal via the principle of
+   explosion.

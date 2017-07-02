@@ -1,7 +1,6 @@
-<ul>
-    $for(posts)$
-        <li>
-            <a href="$url$">$title$</a> - $date$
-        </li>
-    $endfor$
-</ul>
+$for(posts)$
+<div class="blog-post">
+  $partial("templates/post-body.html")$
+  <a href="$url$">Read more / comment &raquo;</a>
+</div>
+$endfor$
