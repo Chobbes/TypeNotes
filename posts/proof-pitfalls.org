@@ -18,3 +18,29 @@ tags: coq, tactics, theorem proving, proofs
    Thus, when introducing more than necessary prior to induction you
    may unintentionally weaken the induction hypothesis that you will
    get, making it impossible to prove your goal.
+
+* Destruct
+
+** Forgetting things
+
+   When you ~destruct~ a compound expression you lose what the original equation was. For instance:
+
+   #+BEGIN_SRC coq
+   destruct (beq_nat 3 n).
+   #+END_SRC
+
+   will give you two subgoals. One where ~(beq_nat 3 n)~ is replaced
+   with ~true~, and one where it is replaced with ~false~.
+
+   Sometimes, however, you actually need the fact that ~(beq_nat 3 n)
+   = true~ in that branch of the proof, or that ~(beq_nat 3 n) =
+   false~ in the other branch of the proof. You can keep this
+   information with:
+
+   #+BEGIN_SRC coq
+   destruct (beq_nat 3 n) eqn:Hbeq3.
+   #+END_SRC
+
+   Which will introduce in the context a hypothesis ~Hbeq3~ which will
+   be ~beq_nat 3 n = true~ in the ~true~ branch of the proof, and
+   ~beq_nat 3 n = false~ in the false branch.

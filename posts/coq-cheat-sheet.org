@@ -5,12 +5,12 @@ author: Calvin Beck
 tags: coq, tactics, theorem proving, proofs
 ---
 
-* intros
+* ~intros~
 
   Introduces variables and hypothesis. This takes them out of the goal
   and puts them in the context.
 
-* reflexivity
+* ~reflexivity~
 
   Does reflexivity. If a goal has ~x = y~ it will try to simplify (by
   normalization) both ~x~ and ~y~. If their normal forms are
@@ -27,7 +27,7 @@ tags: coq, tactics, theorem proving, proofs
   and ~2 = 2~ is obviously true because each side of the equality is
   syntactically identical.
 
-* simpl
+* ~simpl~
 
   Attempts to simplify the goal. This essentially just evaluates to
   weak head normal form. Useful for seeing next steps in a proof (hard
@@ -40,7 +40,7 @@ tags: coq, tactics, theorem proving, proofs
 
   ~simpl~ will transform this to ~2 = 2~.
 
-* rewrite
+* ~rewrite~
 
   When we have ~x = y~ it can be used to replace ~x~ with ~y~ in a
   goal, or vice versa.
@@ -54,7 +54,7 @@ tags: coq, tactics, theorem proving, proofs
   Then ~rewrite H~ will leave us with the goal ~y = y~, and
   ~rewrite <- H~ will leave us with ~x = x~.
 
-* apply
+* ~apply~
 
   Used to solve a goal by applying a theorem which has an identical
   conclusion to the current goal. Any hypothesis of the theorem will
@@ -88,27 +88,33 @@ tags: coq, tactics, theorem proving, proofs
   - ~apply H in H0~ will use ~H : x = y -> y = z~ to transform ~H0 : x
     = y~ to ~y = z~. After this we can apply ~H0~ to our goal.
 
-* symmetry
+* ~symmetry~
 
   Reverses an equality. Using ~symmetry~ will flip ~x = y~ to ~y = x~.
 
   This is useful for when you need to ~apply~ a theorem, but the goal
   is in a different order than the theorem.
 
-* destruct
+* ~destruct~
 
   The ~destruct~ tactic is used to perform case analysis in Coq. It
   will break a possible value into all cases for that type (one for
   each constructor of the type). This gives you multiple goals to
   prove; one for each constructor.
+
+  This can be used on variables, or compound expressions.
+
+  When using destruct on a compound expression it is also possible to save the original expression.
+
+  ~destruct (f (x + y)) eqn:Hfxy~
   
-* induction
+* ~induction~
 
   The ~induction~ tactic is very similar to ~destruct~, except that it
   brings an induction hypothesis into the context for recursive data
   types.
 
-* inversion
+* ~inversion~
 
   ~inversion~ provides reasoning with constructors taking into account
   the fact that constructors are injective and disjoint.
@@ -173,3 +179,45 @@ tags: coq, tactics, theorem proving, proofs
    hypothesis, and since we have a contradiction in our set of
    assumptions we may conclude the goal via the principle of
    explosion.
+
+* ~generalize dependent~
+
+  The ~generalize dependent~ tactic can be used to place a variable in
+  the context back into the goal. This can be useful when you only
+  want to introduce certain variables, like when you want to keep your
+  induction hypothesis strong.
+
+* ~unfold~
+
+  This tactic is used to expand a definition.
+
+  #+BEGIN_SRC coq
+  Definition square n := n * n
+  #+END_SRC
+
+  #+BEGIN_SRC coq
+  square (n * m) = square n * square m
+  #+END_SRC
+
+  ~unfold square~ will yield
+
+  #+BEGIN_SRC coq
+  (n * m) * (n * m) = (n * n) * (m * m)
+  #+END_SRC
+
+  which will actually display as
+
+  #+BEGIN_SRC coq
+  n * m * (n * m) = n * n * (m * m)
+  #+END_SRC
+
+  due to the associativity of the operators.
+
+* ~assert~
+
+  This tactic will introduce a hypothesis into the context, and then
+  split the goal into two subgoals. The first subgoal is to prove that
+  this hypothesis is true, and the second subgoal is the original
+  goal.
+
+* ~replace~
