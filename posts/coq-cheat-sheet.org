@@ -213,6 +213,20 @@ tags: coq, tactics, theorem proving, proofs
 
   due to the associativity of the operators.
 
+  This tactic can be very useful when you can simplify a definition
+  based on rewriting a term inside the definition. For instance if the
+  definition contains a ~match~ like:
+
+  #+BEGIN_SRC coq
+  match test x with
+    | true => some_stuff
+    | false => other_stuff
+  end.
+  #+END_SRC
+
+  Then if you have ~test x = true~ in the context you can simplify
+  this ~match~ to just ~some_stuff~.
+
 * ~assert~
 
   This tactic will introduce a hypothesis into the context, and then
@@ -221,3 +235,37 @@ tags: coq, tactics, theorem proving, proofs
   goal.
 
 * ~replace~
+
+* ~split~
+
+  Used to split a conjunction in a goal into two subgoals.
+
+  If the conjunction is in the context, and not the goal, then one
+  would use ~destruct~ instead.
+
+* ~left~ and ~right~
+
+  These tactics are used to pick a side of a disjunction in the goal
+  to prove.
+
+* ~exfalso~
+
+  Turns the goal into ~False~. This is useful when working with
+  negations.
+
+* ~exists~
+
+  Used in proofs with existential quantifiers. For instance if our goal was
+
+  #+BEGIN_SRC coq
+  exists x : nat, x = 2 + 2
+  #+END_SRC
+
+  Then ~exists 4~ would substitute ~4~ for ~x~, removing the
+  existential quantifier, and leaving us with:
+
+  #+BEGIN_SRC coq
+  4 = 2 + 2
+  #+END_SRC
+
+  Which can then be solved with ~reflexivity~.
