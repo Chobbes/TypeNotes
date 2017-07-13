@@ -43,9 +43,9 @@ tags: coq, tactics, theorem proving, proofs
 ** ~simpl~
 
    Attempts to simplify the goal. This essentially just evaluates to
-   weak head normal form. Useful for seeing next steps in a proof (hard
-   to unwind definitions in your head sometimes), and it can be used to
-   facilitate rewrites.
+   weak head normal form. Useful for seeing next steps in a proof
+   (hard to unwind definitions in your head sometimes), and it can be
+   used to facilitate rewrites.
 
    #+BEGIN_SRC coq
      1 + 1 = 2
@@ -53,6 +53,11 @@ tags: coq, tactics, theorem proving, proofs
 
    ~simpl~ will transform this to ~2 = 2~.
 
+   ~simpl~ sometimes won't evaluate as much as you expect, because if
+   it always evaluated as much as it possibly could you would end up
+   with really long terms. So, simple has some heuristics to decide
+   when to keep evaluating, and when not to.
+   
 ** ~rewrite~
 
    When we have ~x = y~ it can be used to replace ~x~ with ~y~ in a
