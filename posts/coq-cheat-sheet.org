@@ -100,6 +100,11 @@ tags: coq, tactics, theorem proving, proofs
      solved by applying ~H0~.
    - ~apply H in H0~ will use ~H : x = y -> y = z~ to transform ~H0 : x
      = y~ to ~y = z~. After this we can apply ~H0~ to our goal.
+** ~assumption~
+
+   This calls ~apply~ on a hypothesis in the context that matches the
+   goal. I.e., it finds the hypothesis for you.
+
 ** ~symmetry~
 
    Reverses an equality. Using ~symmetry~ will flip ~x = y~ to ~y = x~.
@@ -309,3 +314,6 @@ tags: coq, tactics, theorem proving, proofs
     #+BEGIN_SRC coq
     plus_comm p : forall m : p + m = m + p
     #+END_SRC
+
+    This works in pretty much any tactic, like ~destruct~, since
+    theorems are just first class objects in Coq.
