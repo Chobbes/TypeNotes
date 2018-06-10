@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-06-09 Sat 20:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcea3a7b">1. #coq</a>
+<ul>
+<li><a href="#org9f3c52c">1.1. Proof General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span>&#xa0;<span class="coq">coq</span></span></a>
+<ul>
+<li><a href="#org141afa5">1.1.1. Coq has frozen in proof general</a></li>
+<li><a href="#orgea69bfa">1.1.2. Use company coq</a></li>
+<li><a href="#orgdb6b416">1.1.3. MELPA?</a></li>
+</ul>
+</li>
+<li><a href="#orge3644f9">1.2. Resources</a>
+<ul>
+<li><a href="#org68f8d74">1.2.1. Coinduction</a></li>
+</ul>
+</li>
+<li><a href="#org5b4c76b">1.3. Coq Libraries</a></li>
+<li><a href="#org7ebe9d4">1.4. Papers</a></li>
+<li><a href="#orga1d01ea">1.5. Ltac Semantics, History, and Future</a>
+<ul>
+<li><a href="#orgbe58713">1.5.1. Old Semantics of Ltac</a></li>
+<li><a href="#org556e8d3">1.5.2. More Modern Ltac Information</a></li>
+<li><a href="#orgfc29bd5">1.5.3. Papers on the Inception of Ltac</a></li>
+<li><a href="#orgf3a74a6">1.5.4. Possible Future</a></li>
+</ul>
+</li>
+<li><a href="#org0c1dfb7">1.6. Managing Coq installations</a>
+<ul>
+<li><a href="#orgb8dfaf6">1.6.1. Switching between versions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="versions">versions</span>&#xa0;<span class="coq">coq</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org9907c52">1.7. VST&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vst">vst</span></span></a>
+<ul>
+<li><a href="#org5691ffe">1.7.1. entailer and cancel&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="vst">vst</span></span></a></li>
+<li><a href="#org461a81f">1.7.2. entailer vs forward&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="vst">vst</span></span></a></li>
+<li><a href="#org01a57c4">1.7.3. Strongest Post Condition Principle</a></li>
+</ul>
+</li>
+<li><a href="#orge4012bc">1.8. Coq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="coq">coq</span></span></a>
+<ul>
+<li><a href="#org136ffaa">1.8.1. Is there a way to force Coq to treat names as constructors&#xa0;&#xa0;&#xa0;<span class="tag"><span class="errors">errors</span></span></a></li>
+<li><a href="#org98ef8cd">1.8.2. <code>nat</code> and large numbers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="errors">errors</span></span></a></li>
+<li><a href="#org310b544">1.8.3. Set vs. Type&#xa0;&#xa0;&#xa0;<span class="tag"><span class="theory">theory</span></span></a></li>
+<li><a href="#org81a7e14">1.8.4. <code>Variable</code> and <code>Generalizable Variable</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="typeclasses">typeclasses</span></span></a></li>
+<li><a href="#orgcb9806a">1.8.5. Real Numbers in Coq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="reals">reals</span>&#xa0;<span class="numbers">numbers</span></span></a></li>
+<li><a href="#orgb92aecf">1.8.6. <code>{| ... |}</code> vs <code>{ ... }</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="typeclasses">typeclasses</span></span></a></li>
+<li><a href="#org4334c3f">1.8.7. <code>debug auto</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="auto">auto</span></span></a></li>
+<li><a href="#org49f0c70">1.8.8. Prop vs. bool&#xa0;&#xa0;&#xa0;<span class="tag"><span class="theory">theory</span></span></a></li>
+<li><a href="#orgec4c938">1.8.9. <code>cbn</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#org43a5a23">1.8.10. <code>cbv</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#org1fb764f">1.8.11. <span class="todo TODO">TODO</span> <code>dependent induction</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#org6d1b30d">1.8.12. Search&#xa0;&#xa0;&#xa0;<span class="tag"><span class="search">search</span></span></a></li>
+<li><a href="#orgdd4541a">1.8.13. <span class="todo TODO">TODO</span> Module types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></a></li>
+<li><a href="#org5ea9513">1.8.14. <span class="todo TODO">TODO</span> Hypothesis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="sections">sections</span></span></a></li>
+<li><a href="#orgec3ff85">1.8.15. <span class="todo TODO">TODO</span> Module Advantages / Disadvantages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></a></li>
+<li><a href="#org888b95f">1.8.16. <span class="todo TODO">TODO</span> Module parameters / instantiation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></a></li>
+<li><a href="#org2e40811">1.8.17. <span class="todo TODO">TODO</span> Hint Ordering / Priority&#xa0;&#xa0;&#xa0;<span class="tag"><span class="auto">auto</span>&#xa0;<span class="hints">hints</span></span></a></li>
+<li><a href="#org27978b0">1.8.18. <span class="todo TODO">TODO</span> Reordering subgoals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="goals">goals</span></span></a></li>
+<li><a href="#org7a9ea4d">1.8.19. Destruct notations&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notation">notation</span></span></a></li>
+<li><a href="#org4276011">1.8.20. <code>pattern term</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#orgb7c3919">1.8.21. <span class="todo TODO">TODO</span> Custom induction principles&#xa0;&#xa0;&#xa0;<span class="tag"><span class="induction">induction</span></span></a></li>
+<li><a href="#org0e12e66">1.8.22. <span class="todo TODO">TODO</span> Destructing multiple existential variables&#xa0;&#xa0;&#xa0;<span class="tag"><span class="destruct">destruct</span></span></a></li>
+<li><a href="#orgf0a389c">1.8.23. Ltac naming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></a></li>
+<li><a href="#org433059e">1.8.24. <span class="todo TODO">TODO</span> Instance / Program Instance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="instance">instance</span>&#xa0;<span class="program_instance">program_instance</span></span></a></li>
+<li><a href="#org88ec5c8">1.8.25. Decidable equality and conditionals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dec_eq">dec_eq</span></span></a></li>
+<li><a href="#org501667f">1.8.26. UIP<sub>Dec</sub>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dec_eq">dec_eq</span></span></a></li>
+<li><a href="#orge928961">1.8.27. <span class="todo TODO">TODO</span> Generators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="qc">qc</span></span></a></li>
+<li><a href="#org51811d1">1.8.28. <span class="todo TODO">TODO</span> Extrinsic / intrinsic verification</a></li>
+<li><a href="#org66f4004">1.8.29. Minifier&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tools">tools</span></span></a></li>
+<li><a href="#org7aec7d9">1.8.30. <span class="todo TODO">TODO</span> Module Functors&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></a></li>
+<li><a href="#org6876530">1.8.31. <span class="todo TODO">TODO</span> Sigma types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="sigma">sigma</span></span></a></li>
+<li><a href="#org0d24ade">1.8.32. <span class="todo TODO">TODO</span> <code>..</code> problems in PG&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bugs">bugs</span></span></a></li>
+<li><a href="#org6982b23">1.8.33. Replacing with A:=B&#xa0;&#xa0;&#xa0;<span class="tag"><span class="set">set</span></span></a></li>
+<li><a href="#orgc121fc9">1.8.34. Coqtop&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bugs">bugs</span></span></a></li>
+<li><a href="#orgfb23da9">1.8.35. ProofGeneral saving contents of buffers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></a></li>
+<li><a href="#orgcbe56d1">1.8.36. ProofGeneral look up information about identifier&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></a></li>
+<li><a href="#org0ccd95c">1.8.37. In Depth Semicolons</a></li>
+<li><a href="#org7e28c56">1.8.38. <span class="todo TODO">TODO</span> InvertN&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#org3be6cf1">1.8.39. <span class="todo TODO">TODO</span> coq-compile-before-require&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></a></li>
+<li><a href="#org2c3c6ce">1.8.40. Ltac Debugging in Proof General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="debugging">debugging</span>&#xa0;<span class="pg">pg</span></span></a></li>
+<li><a href="#org111303a">1.8.41. Inversion subst warning&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="tactics">tactics</span>&#xa0;<span class="best_practices">best_practices</span></span></a></li>
+<li><a href="#orgf26f6ed">1.8.42. Ltac bug fixing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></a></li>
+<li><a href="#org8290173">1.8.43. Redefining Ltac&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></a></li>
+<li><a href="#orgfb634ce">1.8.44. <span class="todo TODO">TODO</span> Cut&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#orga0041e8">1.8.45. Refine vs Exact&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#org964296a">1.8.46. <span class="todo TODO">TODO</span> Unshelve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tacticals">tacticals</span></span></a></li>
+<li><a href="#org7ef5ca3">1.8.47. Congruence&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactic">tactic</span></span></a></li>
+<li><a href="#orgaa302d9">1.8.48. <code>||</code> and <code>+</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="tacticals">tacticals</span></span></a></li>
+<li><a href="#org6304f7a">1.8.49. Progress&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+<li><a href="#orgb0db15b">1.8.50. Extraction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="extraction">extraction</span></span></a></li>
+<li><a href="#org626dd3f">1.8.51. Undocumented tactics as of 8.5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="documentation">documentation</span></span></a></li>
+<li><a href="#org568b530">1.8.52. Is there a way to turn off notations when printing?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notations">notations</span></span></a></li>
+<li><a href="#org44e0e6f">1.8.53. <span class="todo TODO">TODO</span> Functional induction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="induction">induction</span></span></a></li>
+<li><a href="#org2c12c5e">1.8.54. match reverse&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></a></li>
+<li><a href="#orgc0ad365">1.8.55. Notations for repeated patterns (like lists)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notation">notation</span></span></a></li>
+<li><a href="#orgebc0950">1.8.56. Proof with&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcea3a7b" class="outline-2">
+<h2 id="orgcea3a7b"><span class="section-number-2">1</span> #coq</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9f3c52c" class="outline-3">
+<h3 id="org9f3c52c"><span class="section-number-3">1.1</span> Proof General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span>&#xa0;<span class="coq">coq</span></span></h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Proof general is an emacs interface to a number of proof
+assistants. In particular it works quite well with Coq!
+</p>
+
+<p>
+<a href="https://proofgeneral.github.io/">https://proofgeneral.github.io/</a>
+</p>
+</div>
+
+<div id="outline-container-org141afa5" class="outline-4">
+<h4 id="org141afa5"><span class="section-number-4">1.1.1</span> Coq has frozen in proof general</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Use <code>C-c C-x</code> to kill <code>coqtop</code>.
+</p>
+
+<p>
+If all else fails you can kill the <code>coqtop</code> process externally.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea69bfa" class="outline-4">
+<h4 id="orgea69bfa"><span class="section-number-4">1.1.2</span> Use company coq</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Company-coq is an Emacs mode on top of proof general which
+provides a lot of useful additions. It prettifies symbols (which
+can be turned off), it provides a lot of completions which can be
+very useful when discovering tactics, and it provides easy ways to
+look up types and documentation.
+</p>
+
+<p>
+<a href="https://github.com/cpitclaudel/company-coq">https://github.com/cpitclaudel/company-coq</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb6b416" class="outline-4">
+<h4 id="orgdb6b416"><span class="section-number-4">1.1.3</span> MELPA?</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Proof general is not on MELPA as of writing, but the plan is to
+have a MELPA package once the new proof general is out of beta.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge3644f9" class="outline-3">
+<h3 id="orge3644f9"><span class="section-number-3">1.2</span> Resources</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li><a href="https://math-comp.github.io/mcb/book.pdf">https://math-comp.github.io/mcb/book.pdf</a>
+<ul class="org-ul">
+<li>ssreflect book.</li>
+</ul></li>
+<li><a href="http://ilyasergey.net/pnp/">http://ilyasergey.net/pnp/</a>
+<ul class="org-ul">
+<li>another ssreflect book.</li>
+</ul></li>
+<li><a href="http://www.cs.bham.ac.uk/~mhe/GeneralizedHedberg/html/GeneralizedHedberg.html">http://www.cs.bham.ac.uk/~mhe/GeneralizedHedberg/html/GeneralizedHedberg.html</a>
+<ul class="org-ul">
+<li>Hedberg's theorem in Agda. Relevant to decidable propositions.</li>
+</ul></li>
+<li><a href="https://quanttype.net/posts/2016-04-19-finding-that-lemma.html">https://quanttype.net/posts/2016-04-19-finding-that-lemma.html</a>
+<ul class="org-ul">
+<li>How to search in Coq.</li>
+</ul></li>
+<li><a href="https://coq.inria.fr/distrib/current/refman/language/gallina-extensions.html?highlight=sections#section-mechanism">https://coq.inria.fr/distrib/current/refman/language/gallina-extensions.html?highlight=sections#section-mechanism</a>
+<ul class="org-ul">
+<li>Manual page about sections.</li>
+</ul></li>
+<li><a href="https://github.com/uwplse/CoqAST">https://github.com/uwplse/CoqAST</a>
+<ul class="org-ul">
+<li>Toy Coq 8.5 plugin.</li>
+</ul></li>
+<li><a href="https://coq.inria.fr/distrib/current/refman/proof-engine/ltac.html">https://coq.inria.fr/distrib/current/refman/proof-engine/ltac.html</a>
+<ul class="org-ul">
+<li>Chapter on Ltac in the reference manual.</li>
+<li>Lots of ways to combine tactics. <code>;</code>, <code>+</code>, <code>||</code></li>
+</ul></li>
+<li><a href="https://github.com/lemonidas/invertn_tactic">https://github.com/lemonidas/invertn_tactic</a>
+<ul class="org-ul">
+<li>Ocaml tactic for inverting a hypothesis and creating at most
+<code>n</code> new hypothesis.</li>
+</ul></li>
+<li><a href="https://github.com/ppedrot/ltac2">https://github.com/ppedrot/ltac2</a>
+<ul class="org-ul">
+<li>Ltac2, a new tactic language</li>
+</ul></li>
+<li><a href="https://coq.inria.fr/cocorico/Home">https://coq.inria.fr/cocorico/Home</a>
+<ul class="org-ul">
+<li>Coq wiki. Seems to have moved to Github: <a href="https://github.com/coq/coq/wiki">https://github.com/coq/coq/wiki</a></li>
+</ul></li>
+<li><a href="http://iris-project.org/">http://iris-project.org/</a>
+<ul class="org-ul">
+<li>Higher-Order Concurrent Separation Logic Framework implemented
+and verified in the proof assistant Coq.</li>
+<li>Somewhat similar to VST</li>
+</ul></li>
+</ul>
+</div>
+
+
+<div id="outline-container-org68f8d74" class="outline-4">
+<h4 id="org68f8d74"><span class="section-number-4">1.2.1</span> Coinduction</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li><a href="http://www.joachim-breitner.de/blog/727-How_is_coinduction_the_dual_of_induction">http://www.joachim-breitner.de/blog/727-How_is_coinduction_the_dual_of_induction</a>_</li>
+<li><a href="http://www.joachim-breitner.de/blog/726-Coinduction_in_Coq_and_Isabelle">http://www.joachim-breitner.de/blog/726-Coinduction_in_Coq_and_Isabelle</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b4c76b" class="outline-3">
+<h3 id="org5b4c76b"><span class="section-number-3">1.3</span> Coq Libraries</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li><a href="https://madiot.fr/coq100/">https://madiot.fr/coq100/</a>
+<ul class="org-ul">
+<li>Common mathematical theorems implemented in Coq.</li>
+</ul></li>
+<li><a href="https://gitlab.mpi-sws.org/robbertkrebbers/coq-stdpp">https://gitlab.mpi-sws.org/robbertkrebbers/coq-stdpp</a> 
+<ul class="org-ul">
+<li>Larger standard library for Coq.</li>
+</ul></li>
+<li><a href="https://github.com/coq-contribs/coq-contribs.git">https://github.com/coq-contribs/coq-contribs.git</a> 
+<ul class="org-ul">
+<li>User submitted coq libraries.</li>
+<li>Superseded by installing libraries with opam.</li>
+</ul></li>
+<li><a href="https://github.com/uwplse/StructTact">https://github.com/uwplse/StructTact</a>
+<ul class="org-ul">
+<li>Utility and tactic library.</li>
+</ul></li>
+<li><a href="https://github.com/wilcoxjay/tactics">https://github.com/wilcoxjay/tactics</a>
+<ul class="org-ul">
+<li>Small tactic library.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ebe9d4" class="outline-3">
+<h3 id="org7ebe9d4"><span class="section-number-3">1.4</span> Papers</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li><a href="https://pdfs.semanticscholar.org/0aba/4e4000988d8563c2e64b343f876efa77767b.PDF">https://pdfs.semanticscholar.org/0aba/4e4000988d8563c2e64b343f876efa77767b.PDF</a> 
+<ul class="org-ul">
+<li>Paper on Pollack-inconsistency. Related to the thought that you
+should not be able to think that a theorem which is false has
+been proved true. Relevant to parsing and printing in proof
+assistants.</li>
+<li>Some slides: <a href="https://www.cs.ru.nl/~freek/talks/rap.pdf">https://www.cs.ru.nl/~freek/talks/rap.pdf</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga1d01ea" class="outline-3">
+<h3 id="orga1d01ea"><span class="section-number-3">1.5</span> Ltac Semantics, History, and Future</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgbe58713" class="outline-4">
+<h4 id="orgbe58713"><span class="section-number-4">1.5.1</span> Old Semantics of Ltac</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<ul class="org-ul">
+<li><a href="http://www.ii.uni.wroc.pl/~wjedynak/publications/master.pdf">http://www.ii.uni.wroc.pl/~wjedynak/publications/master.pdf</a>
+<ul class="org-ul">
+<li>Study of the semantics of Ltac</li>
+<li>Out of date as 8.5 introduced a new tactics engine</li>
+</ul></li>
+<li><a href="http://dl.acm.org/ft_gateway.cfm?id=2505890">http://dl.acm.org/ft_gateway.cfm?id=2505890</a>
+<ul class="org-ul">
+<li>Another paper on the semantics of Ltac</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org556e8d3" class="outline-4">
+<h4 id="org556e8d3"><span class="section-number-4">1.5.2</span> More Modern Ltac Information</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<ul class="org-ul">
+<li><a href="http://coqhott.gforge.inria.fr/blog/coq-tactic-engine/">http://coqhott.gforge.inria.fr/blog/coq-tactic-engine/</a></li>
+<li><a href="http://assert-false.net/arnaud/papers/An%20abstract%20type%20for%20constructing%20tactics%20in%20Coq.pdf">http://assert-false.net/arnaud/papers/An abstract type for constructing tactics in Coq.pdf</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfc29bd5" class="outline-4">
+<h4 id="orgfc29bd5"><span class="section-number-4">1.5.3</span> Papers on the Inception of Ltac</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<ul class="org-ul">
+<li><a href="http://www.lirmm.fr/~delahaye/papers/ltac%20(LPAR'00).pdf">http://www.lirmm.fr/~delahaye/papers/ltac%20(LPAR'00).pdf</a></li>
+<li><a href="http://www.lirmm.fr/~delahaye/papers/ltac%20(LFM'02).pdf">http://www.lirmm.fr/~delahaye/papers/ltac%20(LFM'02).pdf</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf3a74a6" class="outline-4">
+<h4 id="orgf3a74a6"><span class="section-number-4">1.5.4</span> Possible Future</h4>
+<div class="outline-text-4" id="text-1-5-4">
+<ul class="org-ul">
+<li><a href="https://www.xn--pdrot-bsa.fr/slides/coqcs-06-16.pdf">https://www.xn--pdrot-bsa.fr/slides/coqcs-06-16.pdf</a></li>
+<li><a href="https://www.xn--pdrot-bsa.fr/slides/deepspec-06-16.pdf">https://www.xn--pdrot-bsa.fr/slides/deepspec-06-16.pdf</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0c1dfb7" class="outline-3">
+<h3 id="org0c1dfb7"><span class="section-number-3">1.6</span> Managing Coq installations</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-orgb8dfaf6" class="outline-4">
+<h4 id="orgb8dfaf6"><span class="section-number-4">1.6.1</span> Switching between versions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="versions">versions</span>&#xa0;<span class="coq">coq</span></span></h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+You may find yourself wanting to switch between versions of Coq. There are a couple of options for this:
+</p>
+
+<ul class="org-ul">
+<li>opam switch</li>
+<li>the nix package manager</li>
+<li>GNU stow</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9907c52" class="outline-3">
+<h3 id="org9907c52"><span class="section-number-3">1.7</span> VST&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vst">vst</span></span></h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org5691ffe" class="outline-4">
+<h4 id="org5691ffe"><span class="section-number-4">1.7.1</span> entailer and cancel&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="vst">vst</span></span></h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+VST has the tactics <code>entailer</code> and <code>entailer!</code>, which are used to
+solve separation logic goals of the form `_ |&#x2013; _`.
+</p>
+
+<p>
+The difference between <code>entailer</code> and <code>entailer!</code> is that the
+latter uses a heuristic, so it can solve the goal faster. Usually
+you try <code>entailer!</code>, and if it doesn't work you try <code>entailer</code>.
+</p>
+
+<p>
+If it does not work,see if you can rewrite the goal to get
+something of the form <code>A |-- A</code>. If your goal is exactly <code>A |--
+    A</code>, then you can use the tactic <code>cancel</code>, which is to <code>entailer</code>
+what <code>reflexivity</code> is to <code>auto</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org461a81f" class="outline-4">
+<h4 id="org461a81f"><span class="section-number-4">1.7.2</span> entailer vs forward&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="vst">vst</span></span></h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+If your goal has <code>Entail</code> or <code>_ |-- _</code>, then you likely use <code>entailer</code>, or <code>entailer!</code>.
+</p>
+
+<p>
+If your goal has <code>semax</code>, then you do <code>forward</code>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org01a57c4" class="outline-4">
+<h4 id="org01a57c4"><span class="section-number-4">1.7.3</span> Strongest Post Condition Principle</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<p>
+VST is using the <i>strongest post condition principle</i>.
+</p>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Predicate_transformer_semantics#Strongest_postcondition">https://en.wikipedia.org/wiki/Predicate_transformer_semantics#Strongest_postcondition</a>
+</p>
+
+<p>
+<i>Strongest postcondition</i> means if you go <i>forward</i> in the program
+from this precondition, with this instruction I can be sure to end
+up in this postcondition.
+</p>
+
+<p>
+<i>Weakest precondition</i> is going <i>backward</i> in the sequence of the program.
+From this postcondition, if we applied this instruction <b>c</b>, I can assume
+this properties where true before applying this <b>c</b>.
+</p>
+
+<p>
+The advantage of the <i>forward</i> approach is that it is very close
+to symbolic execution, with things such as assignment.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge4012bc" class="outline-3">
+<h3 id="orge4012bc"><span class="section-number-3">1.8</span> Coq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="coq">coq</span></span></h3>
+<div class="outline-text-3" id="text-1-8">
+</div>
+<div id="outline-container-org136ffaa" class="outline-4">
+<h4 id="org136ffaa"><span class="section-number-4">1.8.1</span> Is there a way to force Coq to treat names as constructors&#xa0;&#xa0;&#xa0;<span class="tag"><span class="errors">errors</span></span></h4>
+<div class="outline-text-4" id="text-1-8-1">
+<p>
+This question is asking if there is a mechanism in Coq for treating
+constructors differently, similar to in Haskell. In Haskell you are
+forced to use capital letters at the beginning of every
+constructor's identifier. This makes it so when pattern matching
+the compiler can easily distinguish between what looks like a
+constructor, and what should be a variable (everything that starts
+with a lower case letter). This can be useful for avoiding mistakes
+where you think you're matching on a specific constructor, say <code>C</code>,
+but are instead matching on all constructors and assigning it to a
+variable <code>c</code>.
+</p>
+
+<p>
+Coq has no mechanism for making these distinctions, but you will
+often get error messages like&#x2026;
+</p>
+
+<pre class="example">
+Error: This clause is redundant.
+</pre>
+
+<p>
+Since the variable match could be redundant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98ef8cd" class="outline-4">
+<h4 id="org98ef8cd"><span class="section-number-4">1.8.2</span> <code>nat</code> and large numbers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="errors">errors</span></span></h4>
+<div class="outline-text-4" id="text-1-8-2">
+<p>
+Large natural numbers may cause segfaults, since they can't fit in
+memory. The unary representation is really inefficient. In
+real-world Coq developments you may want to use more efficient
+representations, like <code>Z</code> instead.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org310b544" class="outline-4">
+<h4 id="org310b544"><span class="section-number-4">1.8.3</span> Set vs. Type&#xa0;&#xa0;&#xa0;<span class="tag"><span class="theory">theory</span></span></h4>
+<div class="outline-text-4" id="text-1-8-3">
+<p>
+<code>Set</code> is smaller than <code>Type</code>, since <code>Set : Type</code>.
+</p>
+
+<p>
+Put non-propositional things (things you want to extract) in <code>Set</code>
+where possible.
+</p>
+
+<p>
+(why? Ask Johnw)
+</p>
+
+<p>
+<a href="http://adam.chlipala.net/cpdt/html/Cpdt.Universes.html">http://adam.chlipala.net/cpdt/html/Cpdt.Universes.html</a>
+<a href="https://sympa.inria.fr/sympa/arc/coq-club/2010-04/msg00092.html">https://sympa.inria.fr/sympa/arc/coq-club/2010-04/msg00092.html</a>
+<a href="https://people.cs.kuleuven.be/~bart.jacobs/coq-essence.pdf">https://people.cs.kuleuven.be/~bart.jacobs/coq-essence.pdf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81a7e14" class="outline-4">
+<h4 id="org81a7e14"><span class="section-number-4">1.8.4</span> <code>Variable</code> and <code>Generalizable Variable</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="typeclasses">typeclasses</span></span></h4>
+<div class="outline-text-4" id="text-1-8-4">
+<p>
+<code>Generalizable Variables</code> has nothing to do with <code>Variable</code>.
+</p>
+
+
+<p>
+<code>Generalizable Variables</code> says "allow the following variables to
+be automatically introduced by <code>`{...}</code>".
+</p>
+
+<p>
+<code>Variable</code> introduces a new axiom with the given name into the
+scope that will be added as a parameter at the end of a section.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcb9806a" class="outline-4">
+<h4 id="orgcb9806a"><span class="section-number-4">1.8.5</span> Real Numbers in Coq&#xa0;&#xa0;&#xa0;<span class="tag"><span class="reals">reals</span>&#xa0;<span class="numbers">numbers</span></span></h4>
+<div class="outline-text-4" id="text-1-8-5">
+<p>
+For real analysis in Coq there are a few libraries:
+</p>
+
+<ul class="org-ul">
+<li>Computational, CoRN: <a href="https://github.com/c-corn/corn">https://github.com/c-corn/corn</a></li>
+<li>Fast real computationns in coq: <a href="http://coq-interval.gforge.inria.fr/">http://coq-interval.gforge.inria.fr/</a></li>
+<li>Friendly real number library: <a href="http://coquelicot.saclay.inria.fr/">http://coquelicot.saclay.inria.fr/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb92aecf" class="outline-4">
+<h4 id="orgb92aecf"><span class="section-number-4">1.8.6</span> <code>{| ... |}</code> vs <code>{ ... }</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="typeclasses">typeclasses</span></span></h4>
+<div class="outline-text-4" id="text-1-8-6">
+<p>
+These both introduce dependent records, and should be the same.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4334c3f" class="outline-4">
+<h4 id="org4334c3f"><span class="section-number-4">1.8.7</span> <code>debug auto</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="auto">auto</span></span></h4>
+<div class="outline-text-4" id="text-1-8-7">
+<p>
+Using <code>debug auto</code> will show you what auto is doing.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org49f0c70" class="outline-4">
+<h4 id="org49f0c70"><span class="section-number-4">1.8.8</span> Prop vs. bool&#xa0;&#xa0;&#xa0;<span class="tag"><span class="theory">theory</span></span></h4>
+<div class="outline-text-4" id="text-1-8-8">
+<p>
+Some people prefer the use of <code>bool</code> for decidable propositions
+over <code>Prop</code>, since if it's decidable you can have a boolean
+function which automatically decides the proposition. This is
+better for manipulating the proposition, excluded middle is
+immediate, and you can program with it "natively".  <code>Prop</code> and
+bool.
+</p>
+
+<p>
+You should also be able to convert to Prop if necessary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec4c938" class="outline-4">
+<h4 id="orgec4c938"><span class="section-number-4">1.8.9</span> <code>cbn</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-9">
+<p>
+"call by name"
+</p>
+
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.cbn">https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.cbn</a>
+</p>
+
+<p>
+Meant to be a more predictable replacement for <code>simpl</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org43a5a23" class="outline-4">
+<h4 id="org43a5a23"><span class="section-number-4">1.8.10</span> <code>cbv</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-10">
+<p>
+"call by value"
+</p>
+
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.cbv">https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.cbv</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1fb764f" class="outline-4">
+<h4 id="org1fb764f"><span class="section-number-4">1.8.11</span> <span class="todo TODO">TODO</span> <code>dependent induction</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-11">
+<pre class="example">
+[19:40:28] &lt;jwiegley&gt; @rhd You often need dependent induction when a type dependent on a term you’ve destructed.
+[19:40:54] &lt;jwiegley&gt; @rhd beware, it will induce a dependency on the axiom JMeq, and can in most cases be avoided (although sometimes requiring a considerable amount of work)
+[19:41:45] &lt;antalsz&gt; @jwiegley I don’t have a good intuition for when it’s really necessary, though – any tips on that?
+[19:41:57] &lt;antalsz&gt; Usually when I’ve tried it it’s because nothing else is working and it isn’t what I really want
+[19:41:58] &lt;jwiegley&gt; If you use vector for any length of time, you’ll run into it fairly readily
+[19:42:03] &lt;jwiegley&gt; I have a cute example if you like
+[19:42:16] &lt;rhd&gt; according to `Print Assumptions` the uses of it in Semantics.v don't involve JMeq
+[19:42:17] &lt;antalsz&gt; much like turning on `-XImpredicativeTypes`, it seems to be a symptom of me going terribly wrongheaded along the way
+[19:42:18] &lt;rhd&gt; which is weird
+[19:42:33] &lt;rhd&gt; or maybe I'm wrong about what `Print Assumptions` says
+[19:43:13] &lt;jwiegley&gt; @rhd Nice, sometimes (though rarely) it can do its work without the axiom.
+[19:44:03] &lt;jwiegley&gt; @antalsz https://github.com/jwiegley/category-theory/blob/master/Instance/Two.v#L69 
+[19:44:08] &lt;rhd&gt; i guess it also retains equalities for you about the indices(?) of the dependent type you're doing induction on
+[19:44:38] &lt;jwiegley&gt; Edit that line to change the semicolon to .  Then if you try to destruct f, you’ll get the error that indicates (usually) that dependent induction will work.  Which it will, and easily solve the goal here.  You can see the custom inversion lemma I’m using here to avoid it.
+[19:45:08] &lt;jwiegley&gt; This is a case where using dependent destruction results in the following assumption:
+[19:45:08] &lt;jwiegley&gt; ```Axioms:
+[19:45:08] &lt;jwiegley&gt; JMeq_eq : ∀ (A : Type) (x y : A), x ~= y → x = y
+[19:45:08] &lt;jwiegley&gt; ```
+[19:46:02] &lt;rhd&gt; https://github.com/uwplse/StructTact/blob/master/StructTactics.v#L517-L523  This tactic does something similar to help you track the actual values of indices
+[19:46:08] &lt;jwiegley&gt; @rhd It can introduce heterogeneous equalities (via the axiom, when needed) which gives it a lot of additional power.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org6d1b30d" class="outline-4">
+<h4 id="org6d1b30d"><span class="section-number-4">1.8.12</span> Search&#xa0;&#xa0;&#xa0;<span class="tag"><span class="search">search</span></span></h4>
+<div class="outline-text-4" id="text-1-8-12">
+<p>
+Can search for notations by putting double quotes around the
+notation. This can be unexpected when notations are used to
+essentially just rename functions. E.g.,
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Notation</span> open e1 e2     := (open_exp_wrt_exp e1 e2).
+</pre>
+</div>
+
+<p>
+More info on search:
+</p>
+
+<p>
+<a href="https://quanttype.net/posts/2016-04-19-finding-that-lemma.html">https://quanttype.net/posts/2016-04-19-finding-that-lemma.html</a>
+</p>
+
+<p>
+Can be very helpful to search for conversions between data types, like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Search</span> (nat -&gt; Z).
+</pre>
+</div>
+
+<p>
+This snippet will find functions which convert between `nat` and `Z`.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd4541a" class="outline-4">
+<h4 id="orgdd4541a"><span class="section-number-4">1.8.13</span> <span class="todo TODO">TODO</span> Module types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></h4>
+<div class="outline-text-4" id="text-1-8-13">
+<pre class="example">
+[21:14:03] &lt;chobbes&gt; So, a module type ends up being kind of similar to an abstract class if you squint?
+[21:15:03] &lt;tsibutpi&gt; yes but I think modules aren't first class
+[21:15:05] &lt;antalsz&gt; More like an interface, I think, but there’s still a lot of squinting.
+[21:15:33] &lt;chobbes&gt; @antalsz an abstract interface :stuck_out_tongue:?
+[21:16:07] &lt;pmetzger&gt; So it’s a lot more than the sort of modules you find most imperative languages. It is parameterized.
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org5ea9513" class="outline-4">
+<h4 id="org5ea9513"><span class="section-number-4">1.8.14</span> <span class="todo TODO">TODO</span> Hypothesis&#xa0;&#xa0;&#xa0;<span class="tag"><span class="sections">sections</span></span></h4>
+<div class="outline-text-4" id="text-1-8-14">
+<pre class="example">
+[21:20:50] &lt;graydon&gt; in Sequences.v, I see:
+[21:20:56] &lt;graydon&gt; Hypothesis R_functional:
+[21:20:56] &lt;graydon&gt;   forall a b c, R a b -&gt; R a c -&gt; b = c.
+[21:21:24] &lt;graydon&gt; is that declaring a prop without providing a proof? like is that equivalent to "assume this is true, trust me"?
+[21:22:55] &lt;antalsz&gt; @graydon Yeah, kind of – but not quite
+[21:23:12] &lt;antalsz&gt; `Hypothesis` indeed does that, except that if you look at the top of the file it starts `Section SEQUENCES.`
+[21:23:46] &lt;antalsz&gt; That means that at the end of the section (`End SEQUENCES.`, at the bottom of the file), all the hypothesis and variables and such become _arguments_ to all the necessary values defined inside the section
+[21:24:41] &lt;antalsz&gt; So basically, everything after the `Hypothesis R_functional` declaration gets to assume that `R` is functional, but when the section ends they’ll require an extra argument proving that `R` is indeed functional
+[21:25:16] &lt;graydon&gt; ah, so then
+[21:25:19] &lt;graydon&gt; Lemma cstep_functional:
+[21:25:23] &lt;graydon&gt; is providing it, implicitly?
+[21:25:29] &lt;graydon&gt; (in Semantics.v)
+[21:26:00] &lt;antalsz&gt; Hmm… not quite?
+[21:26:06] &lt;graydon&gt; (presumably this is all done via implicit arguments, since nobody seems to mention it)
+[21:26:13] &lt;antalsz&gt; Not quite
+[21:26:37] &lt;antalsz&gt; In `Semantics`, check the type of `finseq_unique`
+[21:26:56] &lt;antalsz&gt; In `Sequences`, it’s given as```Lemma finseq_unique:
+[21:26:56] &lt;antalsz&gt;   forall a b b',
+[21:26:56] &lt;antalsz&gt;   star a b -&gt; irred b -&gt;
+[21:26:56] &lt;antalsz&gt;   star a b' -&gt; irred b' -&gt;
+[21:26:56] &lt;antalsz&gt;   b = b'.
+[21:26:56] &lt;antalsz&gt; ```
+[21:27:05] &lt;antalsz&gt; but when you check it from _outside_ the section, you see
+[21:27:05] &lt;antalsz&gt; ```
+[21:27:45] &lt;antalsz&gt; and you can see that there’s an extra explicit parameter requiring that `R` is functional
+[21:28:28] &lt;graydon&gt; ok, so then if I _use_ finseq_unique in Semantics.v, coq is just pulling cstep_functional out of the local environment and supplying it?
+[21:28:38] &lt;antalsz&gt; You have to do that application yourself
+[21:28:46] &lt;rhd&gt; https://coq.inria.fr/refman/Reference-Manual004.html#Section 
+[21:28:58] &lt;graydon&gt; I .. just used finseq_unique without providing cstep_functional
+[21:29:01] &lt;antalsz&gt; Simpler example:
+[21:29:04] &lt;antalsz&gt; ```
+[21:29:04] &lt;antalsz&gt; Section S.
+[21:29:04] &lt;antalsz&gt;   Variable n : nat.
+[21:29:04] &lt;antalsz&gt;   Definition square : nat := n * n.
+[21:29:04] &lt;antalsz&gt;   Check square.
+[21:29:04] &lt;antalsz&gt;   (* square : nat *)
+[21:29:04] &lt;antalsz&gt; End S.
+[21:29:04] &lt;antalsz&gt; Check square.
+[21:29:04] &lt;antalsz&gt; (* square : nat -&gt; nat *)
+[21:29:04] &lt;antalsz&gt; ```
+[21:29:20] &lt;rhd&gt; post your proof script?
+[21:29:27] &lt;antalsz&gt; Did you fulfill all your obligations?
+[21:29:36] &lt;rhd&gt; or check what the type of `finseq_unique` is where you used it?
+[21:30:05] &lt;graydon&gt; @graydon uploaded a file: Untitled https://dsss17.slack.com/files/graydon/F69RH190Q/-.ml 
+[21:30:35] &lt;graydon&gt; (not especially lovely proof, but I just don't quite get where it's conjuring the implicit arg to finseq_unique)
+[21:30:38] &lt;antalsz&gt; Look at your very first obligation after you apply `finseq_unique`
+[21:30:57] &lt;antalsz&gt; That’s the functional-relation requirement, and you address it by applying `cstep_functional` :slightly_smiling_face:
+[21:30:57] &lt;graydon&gt; oh, that's where that came from.
+[21:31:01] &lt;graydon&gt; hah
+[21:31:02] &lt;graydon&gt; ok
+[21:31:12] &lt;graydon&gt; (fell into video-game mode there I guess)
+[21:31:17] &lt;graydon&gt; thanks!
+[21:31:18] &lt;antalsz&gt; (And yeah, my proof for that was also ugly)
+[21:31:20] &lt;antalsz&gt; Sure thing!
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgec3ff85" class="outline-4">
+<h4 id="orgec3ff85"><span class="section-number-4">1.8.15</span> <span class="todo TODO">TODO</span> Module Advantages / Disadvantages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></h4>
+<div class="outline-text-4" id="text-1-8-15">
+</div>
+<ol class="org-ol">
+<li><a id="org882d50a"></a>Advantages<br />
+<div class="outline-text-5" id="text-1-8-15-1">
+<ul class="org-ul">
+<li>One advantage to modules over type classes is that you never
+have to repeat typeclass parameters.  Even though you can
+ameliorate that with a Section, it doesn’t help when you need to
+open a different section in another file, but other than that, I
+prefer type classes in nearly every way</li>
+</ul>
+</div>
+</li>
+
+<li><a id="org5163ebe"></a>Disadvantages<br />
+<div class="outline-text-5" id="text-1-8-15-2">
+<ul class="org-ul">
+<li>This paper <a href="http://www.maximedenes.fr/download/refinements.pdf">http://www.maximedenes.fr/download/refinements.pdf</a> argues against the use of modules in Coq</li>
+<li>The "diamond problem"
+<ul class="org-ul">
+<li>typeclasses allows me to use @ to
+override a descendent type at a particular use location, whereas
+with modules I would have to instantiate a whole other set of
+definitions for each variation</li>
+</ul></li>
+</ul>
+
+<pre class="example">
+[21:22:31] &lt;jwiegley&gt; One advantage to modules over type classes is that you never have to repeat typeclass parameters.  Even though you can ameliorate that with a Section, it doesn’t help when you need to open a different section in another file.
+[21:22:35] &lt;tsibutpi&gt; this paper http://www.maximedenes.fr/download/refinements.pdf  argues against the use of modules in Coq:
+[21:22:35] &lt;tsibutpi&gt; "The traditional approach to abstraction is to first define an interface specify-
+[21:22:35] &lt;tsibutpi&gt; ing operators and their properties, then instantiate it with concrete implementa-
+[21:22:35] &lt;tsibutpi&gt; tions of the operators with proofs that they satisfy the properties. However, this
+[21:22:35] &lt;tsibutpi&gt; has at least two drawbacks in our context. First, it is not always obvious how
+[21:22:35] &lt;tsibutpi&gt; to define the correct interface, and it is not clear if a suitable one even exists.
+[21:22:35] &lt;tsibutpi&gt; Second, having abstract axioms goes against the type-theoretic view of objects
+[21:22:35] &lt;tsibutpi&gt; with computational content, which means in practice that proof techniques like
+[21:22:35] &lt;tsibutpi&gt; small  scale  reflection,  as  advocated  by  the
+[21:22:35] &lt;tsibutpi&gt; SSReflect
+[21:22:35] &lt;tsibutpi&gt; extension  [9],  are  not
+[21:22:35] &lt;tsibutpi&gt; applicable."
+[21:22:42] &lt;jwiegley&gt; but other than that, I prefer type classes in nearly every way
+
+[18:59:41] &lt;graydon&gt; I've heard several people disparage the module system in coq as broadly incompatible with several of the needs and idioms of proving theorems; is this less-true when the module has less-logical content and more computational? or less-indexed and more-parametric types? is there some guideline as to when it's worth using, or is the answer just "never if you can avoid it"?
+[19:03:18] &lt;antalsz&gt; My vote is for “never” – the trouble I ran into, IIRC, was with a module for finite-size words (e.g. 32-bit, 64-bit, 17-bit, …), and that feels fairly computational to me.  But I don’t have a principled reason.
+[19:04:13] &lt;jwiegley&gt; I second @antalsz ‘s vote
+[19:08:56] &lt;bcpierce&gt; Do you have a principled reason?
+[19:12:36] &lt;jwiegley&gt; The “diamond problem
+[19:13:26] &lt;jwiegley&gt; typeclasses allows me to use @ to override a descendent type at a particular use location, whereas with modules I would have to instantiate a whole other set of definitions for each variation
+[19:15:03] &lt;jwiegley&gt; for example of what the diamond problem even worse than normal is that due to generativity, if B depends on A and C depends on A, and then make a D that depends on B and C, you’ll often get errors about A.foo != A.foo, not realized that B.A.foo and C.A.foo have been generated as different definitions
+[19:16:16] &lt;jwiegley&gt; whereas with typeclasses where you have defined members rather than typeclasses, you just have an equality witness that must be provided, but it’s fairly clear from the context (after turning on implicits) why the disconnect is happening
+[19:22:51] &lt;jwiegley&gt; I have one more issue, but let me make an example that will speak louder than my words
+[19:40:14] &lt;jwiegley&gt; @bcpierce https://gist.github.com/11bf3953995fe37a90f2c4caaeed5d62 
+[19:40:14] &lt;jwiegley&gt; @jwiegley shared a file: a.rb https://dsss17.slack.com/files/jwiegley/F6ATW6C2C/a.rb 
+[19:41:08] &lt;jwiegley&gt; That code is a problem I recently ran into in real code that I wanted to use (from MIT).  Their use of module functors forced me to have to reimplement the subset of their functionality that I needed using type classes, because I was unable to refactor all of my code to use their module type’s interface.
+</pre>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org888b95f" class="outline-4">
+<h4 id="org888b95f"><span class="section-number-4">1.8.16</span> <span class="todo TODO">TODO</span> Module parameters / instantiation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></h4>
+<div class="outline-text-4" id="text-1-8-16">
+<pre class="example">
+[22:05:02] &lt;yjsong&gt; Question on Module Type: I want to define something inside Module Type, which solely depends on the interface itself. (does not require instantiation)
+[22:05:02] &lt;yjsong&gt; For example, with Module Type below,```Module Type Boo.
+[22:05:02] &lt;yjsong&gt;   Parameter t: Type.
+[22:05:02] &lt;yjsong&gt;   Parameter eqb: t -&gt; t -&gt; bool.
+[22:05:02] &lt;yjsong&gt;   Definition eq (a0 a1: t): Prop := if (eqb a0 a1) then True else False.
+[22:05:02] &lt;yjsong&gt; End Boo.
+[22:05:02] &lt;yjsong&gt; ```I don't want to define `eq` in each instantiations, but Coq requires me to do this.```Module BooNat &lt;: Boo.
+[22:05:02] &lt;yjsong&gt;   Definition t := nat.
+[22:05:02] &lt;yjsong&gt;   Definition eqb := Nat.eqb.
+[22:05:02] &lt;yjsong&gt;   Definition eq (a0 a1: t): Prop := if (eqb a0 a1) then True else False. (* &lt;----------- *)
+[22:05:02] &lt;yjsong&gt; End BooNat.
+[22:05:02] &lt;yjsong&gt; Module BooZ &lt;: Boo.
+[22:05:02] &lt;yjsong&gt;   Definition t := Z.
+[22:05:02] &lt;yjsong&gt;   Definition eqb := Z.eqb.
+[22:05:02] &lt;yjsong&gt;   Definition eq (a0 a1: t): Prop := if (eqb a0 a1) then True else False. (* &lt;----------- *)
+[22:05:02] &lt;yjsong&gt; End BooZ.
+[22:05:02] &lt;yjsong&gt; ```How can I solve this? My workaround was to make something like `Module BooFacts (E: Boo)` and instantiate this for each instantiation of `Boo`..
+[22:53:51] &lt;jwiegley&gt; @yjsong You can define a module that depends on this module type; people who want to use your module+module type will still need an instantiation of the type.  For example, the FMap library requires you to note only import their module, but also provide an instantiation of the DecidableTypeEx module type.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org2e40811" class="outline-4">
+<h4 id="org2e40811"><span class="section-number-4">1.8.17</span> <span class="todo TODO">TODO</span> Hint Ordering / Priority&#xa0;&#xa0;&#xa0;<span class="tag"><span class="auto">auto</span>&#xa0;<span class="hints">hints</span></span></h4>
+<div class="outline-text-4" id="text-1-8-17">
+<p>
+Can you order things in a hint database? You could do this
+manually by stratifying hints into different databases, which you
+then order in a tactic&#x2026;
+</p>
+
+<p>
+A better solution might be to add hint priority values, like so:
+</p>
+<pre class="example">
+[16:22:19] &lt;biv&gt; Is there a way to order things in the hint database ?
+[16:30:16] &lt;bjones&gt; seems like you could do it manually by stratifying your hints into different databases which you then order in a tactic.
+[16:32:09] &lt;biv&gt; Yes of course but that looks like more a work around.
+[16:43:43] &lt;jwiegley&gt; You can give hint priority values…
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org27978b0" class="outline-4">
+<h4 id="org27978b0"><span class="section-number-4">1.8.18</span> <span class="todo TODO">TODO</span> Reordering subgoals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="goals">goals</span></span></h4>
+<div class="outline-text-4" id="text-1-8-18">
+<pre class="example">
+[00:55:44] &lt;vzaliva&gt; Does anybody knows a way to reorder sub-goals? I am applying lemma which generates intermediate sub-goals to satisfy pre-conditions. I would rather prove them right away before proceeding with the rest of the proof. `Focus 2` is the only way I found.
+[00:56:34] &lt;chobbes&gt; @vzaliva you could always `admit.` and backtrack later.
+[00:57:33] &lt;dschoepe&gt; ssreflect has some combinators for this, you can write `last first` to handle the last goal first, for instance. Not sure about standard Coq though
+[00:58:12] &lt;vzaliva&gt; @dschoepe this is exactly what I want! But I do not use ssreflect. Maybe I can write small tactics to reverse the order?
+[00:58:29] &lt;jwiegley&gt; all:swap 1 2 will swap the position of sub-goals 1 and2
+[00:58:35] &lt;jwiegley&gt; I don’t know if there’s a “last” moniker though
+[00:58:50] &lt;antalsz&gt; If they're sufficiently trivial, you can do `generate_subgoals; [on_first | on_second | | on_fourth]`
+[00:58:53] &lt;vzaliva&gt; another workaround is: `apply a ; [ idtac; apply xxx; apply yyy]` but this works only if proves are short
+[00:58:56] &lt;dschoepe&gt; Fwiw, you can simply import ssreflect and only use the parts you want and nothing else though
+[00:59:03] &lt;jwiegley&gt; @vzaliva Use unshelve before your tactic, i.e.,: `unshelve econstructor.`
+[00:59:10] &lt;jwiegley&gt; this will present you with the evar goals first
+[00:59:16] &lt;antalsz&gt; Well, it'll eat your `rewrite` tactic regardless
+[00:59:25] &lt;andreasloow&gt; do you have a thm to test this on?
+[00:59:49] &lt;andreasloow&gt; did you test the second one (fold_do’)?
+[01:00:35] &lt;vzaliva&gt; @jwiegley `unshelve` does not work as they are not shelved in the first place
+[01:00:53] &lt;jwiegley&gt; which tactic is generating your goals?
+[01:01:00] &lt;vzaliva&gt; is it something I can try to write in LTAC? sounds like an exercise :slightly_smiling_face:
+[01:02:16] &lt;jwiegley&gt; @vzaliva There’s also `revgoals`
+[01:02:28] &lt;vzaliva&gt; @jwiegley 'rewrite'
+[01:02:35] &lt;jwiegley&gt; ah, I see
+[01:02:47] &lt;jwiegley&gt; then I would use `all:swap X Y`
+[01:03:41] &lt;vzaliva&gt; `all:revgoals` is exactly what I need. Thanks @jwiegley !
+[01:05:20] &lt;andreasloow&gt; is it idiomatic to swap around subgoals (or reorder them in general)? maybe there are no clear “code standards” for coq proofs…
+[01:05:27] &lt;andreasloow&gt; looks ugly to me at least :stuck_out_tongue:
+[01:05:39] &lt;jwiegley&gt; I prefer not to do it if I can avoid it, it makes proofs more brittle
+[01:06:07] &lt;jwiegley&gt; if you must do it, definitely use bullets or braces also, so you are assured of a fixed number of sub-goals to which it might apply
+[01:07:14] &lt;andreasloow&gt; yeah, i’m not sure it’s more brittle than relying on the default order, but it’s at least “unnecessary code”, in the sense that it’s not needed
+[01:07:20] &lt;andreasloow&gt; one then wonders why it’s there
+[01:07:40] &lt;andreasloow&gt; (someone reading the proof later, that is)
+[01:08:35] &lt;vzaliva&gt; if you view your proof as a script (sequence of steps) it is confusing to left with bunch of subgoals at the end collected from all the steps. I would like to complete each step along with it's sub-goals before proceeding to the next.
+[01:09:13] &lt;jwiegley&gt; braces can certainly help with that
+[01:09:14] &lt;andreasloow&gt; what’s the context?
+[01:09:29] &lt;jwiegley&gt; { rewrite foo. - subgoal1 - subgoal2 - subgoal3 }
+[01:09:43] &lt;jwiegley&gt; you can’t “move on” until every subgoal is discharged
+[01:10:39] &lt;denisredozubov&gt; yes
+[01:10:48] &lt;andreasloow&gt; looks better if it works the way i think it works :slightly_smiling_face:
+[01:10:50] &lt;vzaliva&gt; It is also strange now goals are numbered during rewrite. I have only one goal first, and do a rewrite. I would expect it to rewrite my current goal and add (in my case) 2-sub goals. Instead it creates 2 sub-goals at the same level.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org7a9ea4d" class="outline-4">
+<h4 id="org7a9ea4d"><span class="section-number-4">1.8.19</span> Destruct notations&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notation">notation</span></span></h4>
+<div class="outline-text-4" id="text-1-8-19">
+<p>
+You can do destruct on notations like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #00008b;">destruct</span> <span style="color: #2aa198;">"[=]"</span>.
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4276011" class="outline-4">
+<h4 id="org4276011"><span class="section-number-4">1.8.20</span> <code>pattern term</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-20">
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.pattern">https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.pattern</a>
+</p>
+
+<p>
+<code>pattern x</code> will abstract all occurrences of <code>x</code>, so for instance
+it will change <code>x + 1</code> into <code>(fun v =&gt; v + 1) x</code>. This can be
+useful for some automation and applications, which are expecting
+function applications.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7c3919" class="outline-4">
+<h4 id="orgb7c3919"><span class="section-number-4">1.8.21</span> <span class="todo TODO">TODO</span> Custom induction principles&#xa0;&#xa0;&#xa0;<span class="tag"><span class="induction">induction</span></span></h4>
+<div class="outline-text-4" id="text-1-8-21">
+<pre class="example">
+[13:39:08] &lt;nomeata&gt; How do I use `induction … using my_custom_ind with …` if `my_custom_ind` is a custom induction lemma with additional premises on the induction variable, e.g.```my_custom_ind : forall m P, P m -&gt; (forall n, P (S n) -&gt; P n) -&gt; forall n, n &lt;= m -&gt; P n
+[13:39:08] &lt;nomeata&gt; ```Do I have to move the `n &lt;= m` somewhere else in `my_custom_ind`?
+[13:40:26] &lt;jwiegley&gt; Can you show some representative code?
+[13:41:02] &lt;jwiegley&gt; you could also apply the induction premise directly, rather than using “induction”
+[13:41:35] &lt;jwiegley&gt; you may need to use `pattern x` so `apply` can infer `P` easily
+[13:44:46] &lt;nomeata&gt; The representative code is pretty large (8 cases)… I’ll build an example from `my_custom_ind`…
+[13:45:26] &lt;antalsz&gt; @jwiegley What does `pattern x` do?
+[13:45:48] &lt;jwiegley&gt; it changes `x + 1` into `(fun v =&gt; v + 1) x`
+[13:46:10] &lt;jwiegley&gt; abstracting all occurrences of `x`
+[13:48:34] &lt;nomeata&gt; Can I make this somehow work with the `induction` tactic:```Axiom my_custom_ind : forall m P, P m -&gt; (forall n, P (S n) -&gt; P n) -&gt; forall n, n &lt;= m -&gt; P n.
+[13:48:34] &lt;nomeata&gt; Lemma foo:
+[13:48:34] &lt;nomeata&gt;   forall a b c,
+[13:48:34] &lt;nomeata&gt;   b &lt; c -&gt; a &lt;= b -&gt; a &lt; c.
+[13:48:34] &lt;nomeata&gt; Proof.
+[13:48:34] &lt;nomeata&gt;   intros.
+[13:48:34] &lt;nomeata&gt;   generalize dependent a.
+[13:48:34] &lt;nomeata&gt;   induction a using my_custom_ind.
+[13:48:34] &lt;nomeata&gt; ```(The premises of `my_custom_ind` may be rearranged if it makes `induction` happy.)
+[13:52:38] &lt;jwiegley&gt; I think part of the problem is that `m` is not mentioned in `P n`, so it cannot be inferred (not even with `einduction` it seems).
+[13:52:42] &lt;jwiegley&gt; However, this works: `eapply my_custom_ind; eauto; intros; omega.`
+[13:54:33] &lt;biv&gt; `induction a` is equivalent to `  apply nat_ind with (n := a) ; intros.`
+[13:54:48] &lt;nomeata&gt; Shoudln’t `induction a using my_custom_ind with (m := b).` fix this problem about infering `m`?
+[13:55:25] &lt;jwiegley&gt; the Axiom doesn’t name its arguments
+[13:55:31] &lt;jwiegley&gt; let me try something with Arguments…
+[13:56:44] &lt;nomeata&gt; (Maybe induction with custom induction schemes with additional premises is simply not supported in Coq?)
+[13:56:45] &lt;jwiegley&gt; no, I can’t get it to recognize the pattern
+[13:57:22] &lt;jwiegley&gt; I think I’ve used additional arguments before, but they appeared in the final type
+[13:57:59] &lt;nomeata&gt; Interestingly, in my real example the error message is not `Error: Cannot recognize the conclusion of an induction scheme.` but rather `Error: Not the right number of induction arguments (expected 1 parameter and 2 arguments).`
+[13:59:18] &lt;nomeata&gt; Maybe I should step back one step and ask “How do I define an induction principle (usable with `induction`) that proofs a proposition not for all values of a type, but only those that satisfy one or more predicates.”
+[14:03:07] &lt;jwiegley&gt; can you induct on `a &lt;= b` instead?
+[14:03:17] &lt;jwiegley&gt; that solves your sample proof, but I don’t know about your real proof
+[14:03:52] &lt;jwiegley&gt; in other words, if you have an inductive proposition encoding your property, then induction on that can be the same as induction on a var+evidence of the property at each step
+[14:04:09] &lt;nomeata&gt; No no, this is just an example for an arbitrary side condition.
+[14:05:04] &lt;nomeata&gt; (I guess I’ll continue with careful use of `apply`. Maybe this is simply not supported.)
+[14:08:08] &lt;biv&gt; @nomeata you should not rely on the naming of the hypothesis by induction. this is not robust. :confused:
+[14:09:29] &lt;nomeata&gt; Ok, I’ll rely on the naming of the hypothesis by `apply` then :wink:
+[14:10:03] &lt;nomeata&gt; `induction` also seems to reorder the hypotheses more sensible.
+[14:10:49] &lt;biv&gt; you can also do it directly in `induction n as [| n IHn ]` or if with more hypothesis `induction h as [IHh | IHh | n IHhn]` ... :slightly_smiling_face:
+[14:11:24] &lt;nomeata&gt; Not fun with 8 cases, each of which have 1 to 6 parameters and hypotheses
+[14:11:51] &lt;biv&gt; `match goal with ... end`
+[14:34:23] &lt;nomeata&gt; In my current project, I solved the fixedpoint problem by, in `iterate`, replace `F x` with `lub x (F x)`. Then I can move the preconditions on `F` to the lemmas that show that I really calculated the fixpoint.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org0e12e66" class="outline-4">
+<h4 id="org0e12e66"><span class="section-number-4">1.8.22</span> <span class="todo TODO">TODO</span> Destructing multiple existential variables&#xa0;&#xa0;&#xa0;<span class="tag"><span class="destruct">destruct</span></span></h4>
+<div class="outline-text-4" id="text-1-8-22">
+<pre class="example">
+[18:04:07] &lt;chobbes&gt; Is there a way to destruct all existentially qualified variables in a hypothesis?
+[18:04:32] &lt;chobbes&gt; E.g., `exists x y, P x y`. I want to get the particular x and y.
+[18:05:28] &lt;chobbes&gt; Oh wait, I bet patterns work.
+[18:05:56] &lt;chobbes&gt; Success!
+[18:06:09] &lt;chobbes&gt; `destruct H as [x [y  H]].`
+[18:06:13] &lt;curtis&gt; I've been destructing them one at a time. paste?  ah thanks
+[18:08:45] &lt;jwiegley&gt; @chobbes Also:
+[18:08:45] &lt;jwiegley&gt; ```Ltac destruct_ex := repeat match goal with
+[18:08:45] &lt;jwiegley&gt; | [ H : exists _, _ |- _ ] =&gt; destruct H
+[18:08:45] &lt;jwiegley&gt; end.
+[18:08:45] &lt;jwiegley&gt; ```
+[18:08:45] &lt;jwiegley&gt; The works because `exists x y, z` is really `exists x, exists y, z`.
+[18:59:29] &lt;jannis&gt; @chobbes @jwiegley Also: `repeat destruct H as [? H]`.
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgf0a389c" class="outline-4">
+<h4 id="orgf0a389c"><span class="section-number-4">1.8.23</span> Ltac naming&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></h4>
+<div class="outline-text-4" id="text-1-8-23">
+<p>
+In Ltac you can give something an automatically generated fresh
+name with <code>?</code> in an "intros list". An example of this is:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #00008b;">destruct</span> H <span style="color: #b58900;">as</span> [? Hblah]
+</pre>
+</div>
+
+<p>
+Using <code>?</code> in this way is similar to using <code>fresh</code> to generate a
+new name, like so:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #b58900;">let</span> H' := fresh <span style="color: #2aa198;">"H"</span> <span style="color: #b58900;">in</span> <span style="color: #00008b;">destruct</span> H <span style="color: #b58900;">as</span> [H' Hblah]
+</pre>
+</div>
+
+<p>
+<code>?</code> may try to be smart about naming, like giving names starting with <code>n</code> to <code>nat</code> types.
+</p>
+
+<ul class="org-ul">
+<li><code>?</code>: <a href="https://coq.inria.fr/refman/proof-engine/tactics.html#coq:tacn.intros">https://coq.inria.fr/refman/proof-engine/tactics.html#coq:tacn.intros</a></li>
+<li><code>fresh</code>: <a href="https://coq.inria.fr/refman/proof-engine/ltac.htm#generating-fresh-hypothesis-names">https://coq.inria.fr/refman/proof-engine/ltac.htm#generating-fresh-hypothesis-names</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org433059e" class="outline-4">
+<h4 id="org433059e"><span class="section-number-4">1.8.24</span> <span class="todo TODO">TODO</span> Instance / Program Instance&#xa0;&#xa0;&#xa0;<span class="tag"><span class="instance">instance</span>&#xa0;<span class="program_instance">program_instance</span></span></h4>
+<div class="outline-text-4" id="text-1-8-24">
+<pre class="example">
+[19:11:30] &lt;denisredozubov&gt; btw I totally forgot what’s difference between `Program Instance` and `Instance`
+[19:11:39] &lt;jwiegley&gt; the Program environment has a lot more magic
+[19:11:44] &lt;denisredozubov&gt; Someone asked that today, but I guess I’ve drifted off.
+[19:11:49] &lt;jwiegley&gt; and you prove the generated goals with Next Obligation rather than Proof
+[19:12:02] &lt;jwiegley&gt; Program Instance will infer a lot of things that Instance won’t
+[19:12:10] &lt;jwiegley&gt; btw, I use Program Instance almost exclusively; I love it
+[19:12:52] &lt;jwiegley&gt; you can change which tactic it uses to auto-solve goals with Local Obligation Tactic := …, which can be super handy
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org88ec5c8" class="outline-4">
+<h4 id="org88ec5c8"><span class="section-number-4">1.8.25</span> Decidable equality and conditionals&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dec_eq">dec_eq</span></span></h4>
+<div class="outline-text-4" id="text-1-8-25">
+<div class="org-src-container">
+<pre class="src src-coq">eq_dec : <span style="color: #b58900;">forall</span> <span style="color: #268bd2;">x y</span> : atom, {x = y} + {x &lt;&gt; y}
+</pre>
+</div>
+
+<p>
+And <code>==</code> is notation for <code>eq_dec a b</code>.
+</p>
+
+<p>
+Now suppose you end up with a goal like:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq">u = (<span style="color: #b58900;">if</span> x == x <span style="color: #b58900;">then</span> u <span style="color: #b58900;">else</span> blah)
+</pre>
+</div>
+
+<p>
+Since <code>x == x</code> is just notation for <code>eq_dec x x</code>, you can do
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #00008b;">destruct</span> (x == x)
+</pre>
+</div>
+
+<p>
+which will split the goal into two, one with the hypothesis <code>x = x</code>, and the other with the hypothesis <code>x &lt;&gt; x</code>.
+</p>
+
+<p>
+In the first case, where <code>x = x</code> the goal should be solvable (<code>auto</code> should be
+sufficient in this specific instance).
+</p>
+
+<p>
+The second case, where <code>x &lt;&gt; x</code>, is solvable by <code>contradiction</code>.
+</p>
+
+<p>
+Using <code>destruct (_ == _)</code> can be a bit annoying, since you end up
+splitting the goal, only to dismiss one with <code>contradiction</code>, so
+it may be more convenient to rewrite using a theorem like the
+following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Theorem</span> <span style="color: #268bd2;">eq_dec_refl</span> {<span style="color: #268bd2;">A</span> : <span style="color: #b58900;">Type</span>} `{EqDec_eq A} (<span style="color: #268bd2;">x</span> : A) : eq_dec x x = <span style="color: #00008b;">left</span> eq_refl.
+<span style="color: #859900;">Proof</span>.
+  <span style="color: #00008b;">destruct</span> (eq_dec x x); [|<span style="color: #ff0000;">contradiction</span>].
+  f_equal; <span style="color: #00008b;">apply</span> (Eqdep_dec.UIP_dec eq_dec).
+<span style="color: #859900;">Qed</span>.
+</pre>
+</div>
+
+<p>
+<a href="https://github.com/plclub/metalib/pull/10/files">https://github.com/plclub/metalib/pull/10/files</a>
+</p>
+
+<p>
+(<code>left</code> is the first constructor of the <code>sumbool</code> type, so it is the equivalent of "true" for the if expression)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org501667f" class="outline-4">
+<h4 id="org501667f"><span class="section-number-4">1.8.26</span> UIP<sub>Dec</sub>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="dec_eq">dec_eq</span></span></h4>
+<div class="outline-text-4" id="text-1-8-26">
+<p>
+<code>EqDep_dec.UIP_dec</code> can be handy for avoiding the <code>JMeq_eq</code> axiom when you have decidability.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge928961" class="outline-4">
+<h4 id="orge928961"><span class="section-number-4">1.8.27</span> <span class="todo TODO">TODO</span> Generators&#xa0;&#xa0;&#xa0;<span class="tag"><span class="qc">qc</span></span></h4>
+<div class="outline-text-4" id="text-1-8-27">
+<pre class="example">
+[15:08:16] &lt;vi&gt; wonders if we can write generators for dependent products, e.g. \Sigma{l}{sorted}.
+[15:10:06] &lt;jwiegley&gt; sure: generate sorted lists, and then use the fact that sort produces evidence for sorted
+[15:10:22] &lt;vi&gt; I guess that works wherever we have a function on the order of l’s carrier with l &lt;= f(l).
+[15:10:27] &lt;vi&gt; (The generator).
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org51811d1" class="outline-4">
+<h4 id="org51811d1"><span class="section-number-4">1.8.28</span> <span class="todo TODO">TODO</span> Extrinsic / intrinsic verification</h4>
+<div class="outline-text-4" id="text-1-8-28">
+<pre class="example">
+[16:22:03] &lt;joomy&gt; Extrinsic verification is nice for
+productivity, sure. My complaint about it is that intrinsic
+verification often plays much nicer with termination checking. Say
+you are pattern matching on a list, and you need to make recursive
+calls with an arbitrary strict suffix of a list. Termination
+checker would not be able to detect that. But if you have an
+argument of a type that describes the suffix relation, you can
+convince the termination checker to pick it up. Otherwise you
+would probably have to resort to the fuel idiom and show that the
+fuel is enough etc.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org66f4004" class="outline-4">
+<h4 id="org66f4004"><span class="section-number-4">1.8.29</span> Minifier&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tools">tools</span></span></h4>
+<div class="outline-text-4" id="text-1-8-29">
+<p>
+Jason Gross has a “minifier” for Coq programs that reveal bugs in
+the compiler, in order to produce better bug reports for the Coq
+team:
+</p>
+
+<p>
+<a href="https://github.com/JasonGross/coq-tools/blob/master/find-bug.py">https://github.com/JasonGross/coq-tools/blob/master/find-bug.py</a> .
+</p>
+
+<p>
+It’s quite easy to use, provided you can reduce any external
+dependencies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7aec7d9" class="outline-4">
+<h4 id="org7aec7d9"><span class="section-number-4">1.8.30</span> <span class="todo TODO">TODO</span> Module Functors&#xa0;&#xa0;&#xa0;<span class="tag"><span class="modules">modules</span></span></h4>
+<div class="outline-text-4" id="text-1-8-30">
+<pre class="example">
+[18:41:03] &lt;ins&gt; Say I have a module type:
+[18:41:03] &lt;ins&gt; ```
+[18:41:03] &lt;ins&gt; Module Type EquivSig.
+[18:41:03] &lt;ins&gt;   Parameter t  : Type.
+[18:41:03] &lt;ins&gt;   Parameter eq : t -&gt; t -&gt; Prop.
+[18:41:03] &lt;ins&gt;  5   Axiom eq_refl  : forall x, eq x x.
+[18:41:03] &lt;ins&gt;  6   Axiom eq_sym   : forall x y, eq x y -&gt; eq y x.
+[18:41:03] &lt;ins&gt;  7   Axiom eq_trans : forall x y z, eq x y -&gt; eq y z -&gt; eq x z.
+[18:41:03] &lt;ins&gt;  8 End EquivSig.
+[18:41:06] &lt;ins&gt; Woops
+[18:43:18] &lt;ins&gt; And I'd like to have a second signature that depends on this one, something like:
+[18:43:18] &lt;ins&gt; ```Require Import Equiv.
+[18:43:18] &lt;ins&gt; Module Type Poset.
+[18:43:18] &lt;ins&gt;   Parameter EQ : Equiv.
+[18:43:18] &lt;ins&gt;   Parameter t : Type.
+[18:43:18] &lt;ins&gt;   Parameter order : t -&gt; t -&gt; Prop.
+[18:43:18] &lt;ins&gt;   Axiom order_refl    : forall x y, EQ.eq x y -&gt; order x y.
+[18:43:18] &lt;ins&gt;   Axiom order_antisym : forall x y, order x y -&gt; order y x -&gt; EQ.eq x y.
+[18:43:18] &lt;ins&gt;   Axiom order_trans   : forall x y z, order x y -&gt; order y z -&gt; order x z.
+[18:43:18] &lt;ins&gt; End Poset.
+[18:43:18] &lt;ins&gt; ```
+[18:43:40] &lt;ins&gt; Is there a way to do this? Or do I have to inline the signature for Equiv in the signatuer for Poset?
+[18:44:39] &lt;ins&gt; Of course you'd also need to specify somehow that EQ.t = t.
+[18:50:20] &lt;antalsz&gt; @ins This is what “functors” (not like in Haskell) are for: you have to specify that `Poset` takes another _module_ as a parameter, which satisfies the module type `Equiv`.
+[18:50:22] &lt;antalsz&gt; ```
+[18:50:34] &lt;antalsz&gt; ```
+[18:50:34] &lt;antalsz&gt; Module Type Poset (EQ : Equiv) &lt;: Equiv.
+[18:50:34] &lt;antalsz&gt;   Include EQ.
+[18:50:34] &lt;antalsz&gt;   
+[18:50:34] &lt;antalsz&gt;   Parameter order : EQ.t -&gt; EQ.t -&gt; Prop.
+[18:50:34] &lt;antalsz&gt;   Axiom order_refl    : forall x y, EQ.eq x y -&gt; order x y.
+[18:50:34] &lt;antalsz&gt;   Axiom order_antisym : forall x y, order x y -&gt; order y x -&gt; EQ.eq x y.
+[18:50:34] &lt;antalsz&gt;   Axiom order_trans   : forall x y z, order x y -&gt; order y z -&gt; order x z.
+[18:50:34] &lt;antalsz&gt; End Poset.
+[18:50:34] &lt;antalsz&gt; ```
+[18:50:56] &lt;ins&gt; Ah, you can have functor signatures
+[18:50:59] &lt;ins&gt; I didn't knw taht
+[18:51:01] &lt;ins&gt; know*
+[18:51:22] &lt;ins&gt; Mm this isn't quite what I want I don't think?
+[18:51:25] &lt;ins&gt; Or maybe it is.
+[18:51:28] &lt;antalsz&gt; Actually, you can drop all the `EQ.` parts – edited
+[18:51:51] &lt;ins&gt; Nevermind, I think this is what I want
+[18:52:01] &lt;ins&gt; thanks!
+[18:52:05] &lt;antalsz&gt; No problem!
+[18:56:44] &lt;ins&gt; Isn't `EQ` already annotated as being type `Equiv`?
+[18:56:59] &lt;robblanco&gt; @ins Do you mean functors in OCaml? Sure, you can have those. Maybe I'm missing some of the context.
+[18:57:03] &lt;lemonidas&gt; It's saying that `Poset` is also `Equiv` I think
+[18:57:10] &lt;ins&gt; Functor signatures
+[18:58:01] &lt;ins&gt; Modules can satisfy multiple signatures?
+[18:58:13] &lt;ins&gt; (e.g. have multiple types?)
+[18:59:19] &lt;antalsz&gt; @ins @lemonidas is right, it says that `Poset` depends on an `Equiv` and is also an `Equiv`
+[18:59:34] &lt;antalsz&gt; Without the `Import EQ.` line, you’d have to drop the `&lt;: Equiv` (and add back the `EQ.`)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org6876530" class="outline-4">
+<h4 id="org6876530"><span class="section-number-4">1.8.31</span> <span class="todo TODO">TODO</span> Sigma types&#xa0;&#xa0;&#xa0;<span class="tag"><span class="sigma">sigma</span></span></h4>
+<div class="outline-text-4" id="text-1-8-31">
+<pre class="example">
+[19:28:12] &lt;npe&gt; Can anyone explain “proj2_sig”?
+[19:28:22] &lt;jwiegley&gt; it’s the second member of a propositional sigma
+[19:28:57] &lt;jwiegley&gt; forall x : { a : T | P T }, (proj2_sig x : P (proj1_sig x))
+[19:29:24] &lt;npe&gt; I’ve found the definitions, but I don’t have context to understand what it’s actually doing.
+[19:29:57] &lt;npe&gt; What is a propositional sigma? RTFM with a pointer to a paper/manual would be a great answer.
+[19:30:16] &lt;jwiegley&gt; it’s a datum along with a witness to the truth of some proposition for that datum
+[19:30:27] &lt;jwiegley&gt; x, plus evidence that P x
+[19:30:50] &lt;jwiegley&gt; proj1_sig gets you the value, proj2_sig gets you the witness to the proposition
+[19:31:04] &lt;jwiegley&gt; (however, note that these only work in a propositional context)
+[19:31:58] &lt;npe&gt; I think I vaguely get it (from the context).
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org0d24ade" class="outline-4">
+<h4 id="org0d24ade"><span class="section-number-4">1.8.32</span> <span class="todo TODO">TODO</span> <code>..</code> problems in PG&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bugs">bugs</span></span></h4>
+<div class="outline-text-4" id="text-1-8-32">
+<pre class="example">
+[01:44:30] &lt;chobbes&gt; Does `..` happen to mean anything in Coq? I keep getting ProofGeneral stuck on this.
+[01:45:02] &lt;antalsz&gt; @chobbes Only in some contexts, because Coq is like that :stuck_out_tongue:
+[01:45:22] &lt;antalsz&gt; But what’s probably happening is that it’s processing up to the first `.`, then getting confused when it tries to process the string `.` as a complete command
+[01:45:22] &lt;chobbes&gt; @antalsz What do you mean?
+[01:45:36] &lt;chobbes&gt; Yeah.
+[01:45:41] &lt;chobbes&gt; This seems to be what happens.
+[01:45:49] &lt;chobbes&gt; Like if you end a tactic with `..`
+[01:45:52] &lt;chobbes&gt; And try to run it.
+[01:45:58] &lt;chobbes&gt; It just gets stuck forever.
+[01:46:15] &lt;chobbes&gt; But it's not really hogging CPU or anything. I think it's just sitting there confused...?
+[01:46:35] &lt;antalsz&gt; @chobbes `Notation "'exists' x .. y , p" := ex (fun y =&gt; .. (ex (fun y =&gt; p)) ..)`
+[01:46:45] &lt;antalsz&gt; `..` is used for recursive/infinite notations like that
+[01:47:11] &lt;chobbes&gt; Ahhhhh.
+[01:47:26] &lt;chobbes&gt; shakes fist.
+[01:47:32] &lt;antalsz&gt; And there’s nothing stopping you from defining `Notation "x '..' y" := (x,y) (at level 10).`
+[01:48:01] &lt;chobbes&gt; Sure, but I feel like this is a bug still.
+[01:48:07] &lt;antalsz&gt; But those aren’t why it’s getting stuck – I’m fairly sure it’s just PG getting confused
+[01:49:04] &lt;antalsz&gt; OK, so I tried something
+[01:49:13] &lt;antalsz&gt; ```% rlwrap coqtop           
+[01:49:13] &lt;antalsz&gt; Welcome to Coq 8.6 (July 2017)
+[01:49:13] &lt;antalsz&gt; Coq &lt; Goal True.
+[01:49:13] &lt;antalsz&gt; 1 subgoal
+[01:49:13] &lt;antalsz&gt;   
+[01:49:13] &lt;antalsz&gt;   ============================
+[01:49:13] &lt;antalsz&gt;   True
+[01:49:13] &lt;antalsz&gt; Unnamed_thm &lt; idtac..
+[01:49:13] &lt;antalsz&gt; Unnamed_thm &lt; idtac.
+[01:49:13] &lt;antalsz&gt; Toplevel input, characters 5-7:
+[01:49:13] &lt;antalsz&gt; &gt; idtac..
+[01:49:13] &lt;antalsz&gt; &gt;      ^^
+[01:49:13] &lt;antalsz&gt; Syntax error: [tactic:ltac_use_default] expected after [tactic:tactic] (in [vernac:tactic_command]).
+[01:49:13] &lt;antalsz&gt; Unnamed_thm &lt; 
+[01:49:13] &lt;antalsz&gt; ```
+[01:49:16] &lt;chobbes&gt; Oh no, something!
+[01:49:45] &lt;antalsz&gt; So it looks like what’s happening with the `..` is that there’s a syntax error but Coq can’t quite tell yet?
+[01:50:02] &lt;chobbes&gt; Oh god, is coqtop one of those awful programs that can't handle user input properly? :stuck_out_tongue: (re: rlwrap)
+[01:50:04] &lt;antalsz&gt; And PG gets confused because it didn’t see the response it expected
+[01:50:28] &lt;antalsz&gt; Alas, yes:```% coqtop
+[01:50:29] &lt;antalsz&gt; Welcome to Coq 8.6 (July 2017)
+[01:50:29] &lt;antalsz&gt; Coq &lt; Goal True.                          
+[01:50:29] &lt;antalsz&gt; 1 subgoal
+[01:50:29] &lt;antalsz&gt;   
+[01:50:29] &lt;antalsz&gt;   ============================
+[01:50:29] &lt;antalsz&gt;   True
+[01:50:29] &lt;antalsz&gt; Unnamed_thm &lt; ^[[A
+[01:50:29] &lt;antalsz&gt; ```
+[01:51:28] &lt;chobbes&gt; I wrote my own rlwrap once because I didn't know rlwrap existed, lol.
+[01:51:37] &lt;chobbes&gt; Note to all: Google your problem first.
+[01:52:09] &lt;antalsz&gt; Anyway, my advice for when PG gets blocked like that is `C-c C-u`, aka `proof-undo-last-successful-command`
+[01:52:32] &lt;pmetzger&gt; BTW, is Proof General eventually going to support the parallelism stuff in CoqIDE?
+[01:52:32] &lt;chobbes&gt; @antalsz it just says that the proof process is busy!
+[01:52:47] &lt;pmetzger&gt; (Or is this an #emacs question? :)
+[01:53:08] &lt;antalsz&gt; And if that fails, `C-c C-x`, aka `proof-shell-exit`, followed by `C-c &lt;C-return&gt;`, aka `proof-goto-point`
+[01:53:28] &lt;antalsz&gt; @chobbes Oh, right
+[01:53:31] &lt;chobbes&gt; @antalsz ah yes, thank you. I always forget that one, and was searching for "quit" which doesn't exist.
+[01:53:58] &lt;antalsz&gt; I actually recommend `C-c C-c` followed by `C-c C-u`, aka `proof-interrupt-process` followed by `proof-undo-last-successful-command`
+[01:54:06] &lt;chobbes&gt; `C-c C-x` is like... mighty close to `C-x C-c`
+[01:54:42] &lt;antalsz&gt; Luckily I have all a nicely paranoid quit option turned on
+[01:54:47] &lt;chobbes&gt; Aha! That worked!
+[01:54:48] &lt;antalsz&gt; I mean, who exits Emacs? :stuck_out_tongue:
+[01:55:13] &lt;chobbes&gt; `:q!`
+[01:55:23] &lt;antalsz&gt; I agree that there’s a bug _somewhere_ in all of this, but I dunno if it’s in PG, Coq, both, or what
+[01:55:36] &lt;antalsz&gt; Luckily “no, stop that, go back” usually seems to suffice
+[01:55:43] &lt;chobbes&gt; Yeah :slightly_smiling_face:.
+[01:55:53] &lt;chobbes&gt; Good to know how to recover.
+[01:56:03] &lt;chobbes&gt; `pkill coqtop` felt slightly wrong.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org6982b23" class="outline-4">
+<h4 id="org6982b23"><span class="section-number-4">1.8.33</span> Replacing with A:=B&#xa0;&#xa0;&#xa0;<span class="tag"><span class="set">set</span></span></h4>
+<div class="outline-text-4" id="text-1-8-33">
+<p>
+Suppose using <code>set</code> you end up with <code>A := B</code> in the context, and you want to rewrite using this.
+</p>
+
+<ul class="org-ul">
+<li><code>unfold A</code>, <code>subst A</code>, or <code>replace A with B by reflexivity</code> should rewrite <code>A</code> with <code>B</code> in the goal.</li>
+<li><code>fold A</code> should rewrite <code>B</code> with <code>A</code> in the goal.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc121fc9" class="outline-4">
+<h4 id="orgc121fc9"><span class="section-number-4">1.8.34</span> Coqtop&#xa0;&#xa0;&#xa0;<span class="tag"><span class="bugs">bugs</span></span></h4>
+<div class="outline-text-4" id="text-1-8-34">
+<p>
+Coqtop is a little annoying to use because it doesn't support
+editing a line as you're writing it. The alternative is to use
+something like <a href="https://github.com/hanslub42/rlwrap">rlwrap</a>. Apparently some versions of rlwrap have
+bugs which make them unusable with Coqtop. A usable alternative is
+<a href="https://opam.ocaml.org/packages/ledit/">ledit</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb23da9" class="outline-4">
+<h4 id="orgfb23da9"><span class="section-number-4">1.8.35</span> ProofGeneral saving contents of buffers&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></h4>
+<div class="outline-text-4" id="text-1-8-35">
+<p>
+Useful keybindings in ProofGeneral: <code>C-c C-a r</code> and <code>C-c C-a g</code>,
+for persisting the contents of the goal and response buffer in
+another, special buffer, which accumulate each such output.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcbe56d1" class="outline-4">
+<h4 id="orgcbe56d1"><span class="section-number-4">1.8.36</span> ProofGeneral look up information about identifier&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></h4>
+<div class="outline-text-4" id="text-1-8-36">
+<p>
+<code>C-c C-i</code> will run check on the identifier at point.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0ccd95c" class="outline-4">
+<h4 id="org0ccd95c"><span class="section-number-4">1.8.37</span> In Depth Semicolons</h4>
+<div class="outline-text-4" id="text-1-8-37">
+<p>
+The impression is that the semicolon operator, <code>bar; foo</code>, will
+run <code>foo</code> on all goals created by <code>bar</code>.
+</p>
+
+<p>
+<code>gfail</code> fails even when there are no goals, so <code>foo; gfail</code> will
+actually fail, even if <code>foo</code> solves all goals, whereas <code>foo; fail</code>
+will succeeds.
+</p>
+
+<p>
+Running tactics after a semicolon when there are no remaining
+goals makes a lot of sense, though. It's reasonable to want to
+print after running a tactic, for instance <code>admit; idtac "hello!"</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e28c56" class="outline-4">
+<h4 id="org7e28c56"><span class="section-number-4">1.8.38</span> <span class="todo TODO">TODO</span> InvertN&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-38">
+<pre class="example">
+[14:27:15] &lt;lemonidas&gt; For whoever interested, I just wrote a Coq plugin that automates "invertn"
+[14:27:16] &lt;lemonidas&gt; https://github.com/lemonidas/invertn_tactic 
+[15:04:41] &lt;jwiegley&gt; @lemonidas That’s great! I was unable to do it with native Ltac, due to incompatibility between Coq terms and OCaml integers:
+[15:04:41] &lt;jwiegley&gt; ```Ltac invert_internal n H :=
+[15:04:41] &lt;jwiegley&gt;   lazymatch n with
+[15:04:41] &lt;jwiegley&gt;   | 0 =&gt; inversion H; clear H; subst
+[15:04:41] &lt;jwiegley&gt;   | S ?n' =&gt; invert_internal n' H; let g := numgoals in guard g &lt; n
+[15:04:41] &lt;jwiegley&gt;   end.
+[15:04:41] &lt;jwiegley&gt; Tactic Notation "invert" integer(n) constr(H) := invert_internal n H.
+[15:04:41] &lt;jwiegley&gt; ```
+
+
+[16:09:35] &lt;dschoepe&gt; ```Ltac invert_internal n H :=
+[16:09:35] &lt;dschoepe&gt;   inversion H; subst; clear H;
+[16:09:35] &lt;dschoepe&gt;   let g := numgoals
+[16:09:35] &lt;dschoepe&gt;   in guard g &lt;= n.
+[16:09:35] &lt;dschoepe&gt; ```
+
+[16:12:53] &lt;jwiegley&gt; For efficiency, move the subset and clear after the guard?
+[16:13:04] &lt;bcpierce&gt; Oh yes, I missed some semicolons when I did the change.  It does work now.
+[16:13:05] &lt;dschoepe&gt; good point
+[16:13:07] &lt;bcpierce&gt; Thanks!!
+[16:13:40] &lt;jwiegley&gt; Just:
+[16:13:40] &lt;jwiegley&gt; ```Tactic Notation "invert" integer(n) constr(H) :=
+[16:13:40] &lt;jwiegley&gt;   inversion H; let g := numgoals in guard g &lt;= n; clear H; subst.
+[16:13:40] &lt;jwiegley&gt; ```
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org3be6cf1" class="outline-4">
+<h4 id="org3be6cf1"><span class="section-number-4">1.8.39</span> <span class="todo TODO">TODO</span> coq-compile-before-require&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pg">pg</span></span></h4>
+<div class="outline-text-4" id="text-1-8-39">
+<pre class="example">
+[15:07:10] &lt;denisredozubov&gt; btw after following the instructions from `tutorial/Tutorial.md` and skimming down the tutorial I’ve tried compiling `CAL/stack/Counter.v` and each `Require` statement takes an eternity to evaluate
+[15:07:25] &lt;denisredozubov&gt; it looks like it compiles `compcert` yet again
+[15:08:17] &lt;dschoepe&gt; This may be the case if you turned on `coq-compile-before-require` perhaps?
+[15:09:52] &lt;denisredozubov&gt; it is
+[15:10:10] &lt;denisredozubov&gt; I don’t have a general sense when I want to have this variable set to `t`
+[15:10:44] &lt;jwiegley&gt; @denisredozubov I always use it, FWIW
+[15:11:11] &lt;heiko&gt; @dschoepe As far as I know, compile before require only recompiles if necessary, hence that should not be a bottleneck.
+[15:11:39] &lt;pmetzger&gt; if you load a second time does it do it yet again?
+[15:11:49] &lt;pmetzger&gt; or does it remember the last set of compiles?
+[15:11:52] &lt;denisredozubov&gt; There is a different instance of compcert in a repo, I believe
+[15:11:53] &lt;jwiegley&gt; it saves the .vo
+[15:12:11] &lt;pmetzger&gt; I was asking @denisredozubov in his particular case.
+[15:12:22] &lt;denisredozubov&gt; i wonder if it makes sense to run `make` and package all the `.vo` files with nix
+[15:12:23] &lt;heiko&gt; @pmetzger It smartly recompiles, if you changed the file being imported
+[15:12:49] &lt;denisredozubov&gt; @pmetzger It haven’t finished doing this
+[15:13:01] &lt;pmetzger&gt; you built compcert before now?
+[15:13:34] &lt;denisredozubov&gt; yes, I’ve used nix for that
+[15:13:55] &lt;denisredozubov&gt; https://github.com/CertiKOS/compcert  I see this one in `CAL` folder
+[15:14:27] &lt;denisredozubov&gt; which is different from the compcert that was used last week
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org2c3c6ce" class="outline-4">
+<h4 id="org2c3c6ce"><span class="section-number-4">1.8.40</span> Ltac Debugging in Proof General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="debugging">debugging</span>&#xa0;<span class="pg">pg</span></span></h4>
+<div class="outline-text-4" id="text-1-8-40">
+<p>
+There is no integration of the Ltac debugger in proof general, but
+you can switch to the <code>\*coq\*</code> buffer to use the debugger
+directly.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org111303a" class="outline-4">
+<h4 id="org111303a"><span class="section-number-4">1.8.41</span> Inversion subst warning&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="tactics">tactics</span>&#xa0;<span class="best_practices">best_practices</span></span></h4>
+<div class="outline-text-4" id="text-1-8-41">
+<p>
+<code>inversion H; subst; clear H</code> is a common pattern, but sometimes
+does not lead to nice results since the <code>subst</code> can cause large
+substitutions, leading to a really complicated context, or it can
+often rewrite hypothesis that you want to keep intact.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf26f6ed" class="outline-4">
+<h4 id="orgf26f6ed"><span class="section-number-4">1.8.42</span> Ltac bug fixing&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></h4>
+<div class="outline-text-4" id="text-1-8-42">
+<p>
+Adam Chlipala points out:
+</p>
+
+<blockquote>
+<p>
+Let me just point out that "fixing bugs in the Ltac semantics"
+often forces significant amounts of code to be rewritten after
+extensive debugging.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org8290173" class="outline-4">
+<h4 id="org8290173"><span class="section-number-4">1.8.43</span> Redefining Ltac&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></h4>
+<div class="outline-text-4" id="text-1-8-43">
+<p>
+<code>::=</code> can be used to redefine existing Ltac definitions.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb634ce" class="outline-4">
+<h4 id="orgfb634ce"><span class="section-number-4">1.8.44</span> <span class="todo TODO">TODO</span> Cut&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-44">
+<pre class="example">
+[23:56:41] &lt;graydon&gt; for whoever was asking earlier today about "cut" in ltac: there appears to be a _hint_ form that automatically does a cut in the prolog sense of pruning the search tree. it uses (hold on to your hat) a _regular expression over the path of hint-identifiers_ in the tree, to decide where to cut. it also only works currently in the typeclass proof search, not general proof search. but maybe they'll extend it someday.
+[23:58:54] &lt;graydon&gt; oh wait I misunderstood; typeclass eauto is maybe generally-applicable?
+[00:03:42] &lt;graydon&gt; yeah, it looks like "typeclasses eauto with core" will run the new proof engine on the core auto database, making it usable in contexts where you'd normally use auto. and then you can, yeah (guh) prune the tree with Hint Cut &lt;regexp&gt;.
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga0041e8" class="outline-4">
+<h4 id="orga0041e8"><span class="section-number-4">1.8.45</span> Refine vs Exact&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-45">
+<p>
+There are two similar tactics built into Coq, <code>refine</code> and
+<code>exact</code>. Both let the user supply a Gallina term which can satisfy
+a goal (if the term has a type that matches).
+</p>
+
+<p>
+<code>exact</code> has to give a term which is complete and exactly matches
+the goal.
+</p>
+
+<p>
+With <code>refine</code> the user can put holes in places which create
+subgoals. For instance you could destruct something like:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #00008b;">refine</span> (<span style="color: #b58900;">match</span> something <span style="color: #b58900;">with</span>
+        | false =&gt; _
+        | true =&gt; _
+        <span style="color: #b58900;">end</span>).
+</pre>
+</div>
+
+<p>
+Which would give you a subgoal for each branch.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org964296a" class="outline-4">
+<h4 id="org964296a"><span class="section-number-4">1.8.46</span> <span class="todo TODO">TODO</span> Unshelve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tacticals">tacticals</span></span></h4>
+<div class="outline-text-4" id="text-1-8-46">
+<pre class="example">
+[03:54:26] &lt;vikraman&gt; I think `unshelve eapply` just works a little harder to introduce evars, I've had cases where refine wouldn't allow me to leave holes in certain places.
+
+[00:47:13] &lt;denisredozubov&gt; &gt; `All the remaining goals are on the shelf.`
+[00:47:19] &lt;denisredozubov&gt; what does that mean?
+[00:52:55] &lt;jwiegley&gt; you need to use `Unshelve` to see them
+[00:53:15] &lt;jwiegley&gt; these are generated goals, typically to resolve evars, which are not visible at first
+[00:57:05] &lt;denisredozubov&gt; how does this interact with `unshelve &lt;tactic&gt;` that was shown today? Is it unshelve the first shelved goal and then apply the tactic?
+[01:36:25] &lt;yjsong&gt; @denisredozubov I think `Unshelve` is top-level keyword (like Qed.) and `unshelve` is tactical.
+[01:37:41] &lt;yjsong&gt; IIUC, `Unshelve` will put all shelved goals into visible state, and `unshelve` does this for only the shelved goals made by next tactic.
+[01:38:37] &lt;yjsong&gt; Actually I cannot find documentation on `unshelve` but I was able to find this: https://github.com/ProofGeneral/PG/issues/30#issuecomment-173974922 
+[01:56:11] &lt;jwiegley&gt; unshelve eauto does not send the evar goals to the shelf
+[01:56:25] &lt;jwiegley&gt; unshelve is undocumented, but very useful
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org7ef5ca3" class="outline-4">
+<h4 id="org7ef5ca3"><span class="section-number-4">1.8.47</span> Congruence&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactic">tactic</span></span></h4>
+<div class="outline-text-4" id="text-1-8-47">
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.congruence">https://coq.inria.fr/distrib/current/refman/proof-engine/tactics.html#coq:tacn.congruence</a>
+</p>
+
+<p>
+Congruence can usually solve goals where you only have to do rewriting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa302d9" class="outline-4">
+<h4 id="orgaa302d9"><span class="section-number-4">1.8.48</span> <code>||</code> and <code>+</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span>&#xa0;<span class="tacticals">tacticals</span></span></h4>
+<div class="outline-text-4" id="text-1-8-48">
+<p>
+<code>||</code> and <code>+</code> are somewhat similar ways of combining tactics.
+</p>
+
+<p>
+<code>t1 || t2</code> runs <code>t2</code> if <code>t1</code> "doesn't do anything", which means
+that it does not change the proof state. So, for example <code>auto ||
+    fail "auto failed"</code> would fail iff <code>auto</code> did not do anything.
+</p>
+
+<p>
+<code>fail || t ≡ t</code> and <code>intros X || t ≡ intros X</code> as you might
+expect, but <code>idtac || t ≡ t</code>
+</p>
+
+<p>
+<code>fail + t ≡ t</code> and <code>intros X + t ≡ intros X</code>, as well as <code>idtac +
+    t ≡ idtac</code>.
+</p>
+
+<p>
+<code>first [t1 | t2 | … | tN]</code> is like <code>t1 + t2 + … + tN</code>, except for
+a minor detail with failure levels
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6304f7a" class="outline-4">
+<h4 id="org6304f7a"><span class="section-number-4">1.8.49</span> Progress&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-49">
+<p>
+To know what it means for a tactic to make progress, it might be
+illustrative to look at the progress tactic:
+</p>
+
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/proof-engine/ltac.html#coq:tacn.progress">https://coq.inria.fr/distrib/current/refman/proof-engine/ltac.html#coq:tacn.progress</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0db15b" class="outline-4">
+<h4 id="orgb0db15b"><span class="section-number-4">1.8.50</span> Extraction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="extraction">extraction</span></span></h4>
+<div class="outline-text-4" id="text-1-8-50">
+<p>
+Coq extraction takes Gallina to a languaged called mini-ml, which
+is then further transformed to other languages.
+</p>
+
+<p>
+Main bit of the ocaml extraction (this isn't including support code for number representations and such):
+</p>
+
+<p>
+<a href="https://github.com/coq/coq/blob/master/plugins/extraction/ocaml.ml">https://github.com/coq/coq/blob/master/plugins/extraction/ocaml.ml</a> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org626dd3f" class="outline-4">
+<h4 id="org626dd3f"><span class="section-number-4">1.8.51</span> Undocumented tactics as of 8.5&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="documentation">documentation</span></span></h4>
+<div class="outline-text-4" id="text-1-8-51">
+<ul class="org-ul">
+<li><code>autoapply</code></li>
+<li><code>autounfold_one</code></li>
+<li><code>debug auto</code></li>
+<li><code>debug eauto</code></li>
+<li><code>debug trivial</code></li>
+<li><code>dependent generalize_eqs</code></li>
+<li><code>dependent generalize_eqs_vars</code></li>
+<li><code>destauto</code></li>
+<li><code>destruct_with_eqn</code></li>
+<li><code>dfs eauto</code></li>
+<li><code>generalize_eqs</code></li>
+<li><code>generalize_eqs_vars</code></li>
+<li><code>gintuition</code></li>
+<li><code>goal</code></li>
+<li><code>guard</code></li>
+<li><code>head_of_constr</code></li>
+<li><code>hget_evar</code></li>
+<li><code>hresolve_core</code></li>
+<li><code>info</code></li>
+<li><code>info_auto</code></li>
+<li><code>info_eauto</code></li>
+<li><code>infoH</code></li>
+<li><code>info_trivial</code></li>
+<li><code>new auto</code></li>
+<li><code>now</code></li>
+<li><code>progress_evars</code></li>
+<li><code>prolog</code></li>
+<li><code>rec</code></li>
+<li><code>rewrite_all</code></li>
+<li><code>rewrite_db</code></li>
+<li><code>setoid_etransitivity</code></li>
+<li><code>simple subst</code></li>
+<li><code>soft functional induction</code></li>
+<li><code>specialize_eqs</code></li>
+<li><code>substitute</code></li>
+<li><code>unshelve</code></li>
+<li><code>etransitivity</code></li>
+<li><code>zify</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org568b530" class="outline-4">
+<h4 id="org568b530"><span class="section-number-4">1.8.52</span> Is there a way to turn off notations when printing?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notations">notations</span></span></h4>
+<div class="outline-text-4" id="text-1-8-52">
+<p>
+Sometimes notations can be confusing and get in the way, if you
+want to disable notations when Coq is printing out information you
+can try:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Unset Printing Notations</span>.
+</pre>
+</div>
+
+<p>
+So, for instance:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Unset Printing Notations</span>.
+
+<span style="color: #859900;">Theorem</span> <span style="color: #268bd2;">foo</span> :
+  <span style="color: #b58900;">forall</span> (<span style="color: #268bd2;">a b</span> : nat),
+    a &lt;= b -&gt; a &lt; b.
+</pre>
+</div>
+
+<p>
+will print the goal as:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #b58900;">forall</span> (<span style="color: #268bd2;">a b</span> : nat) (<span style="color: #268bd2;">_</span> : le a b), lt a b
+</pre>
+</div>
+
+<p>
+instead of:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #b58900;">forall</span> <span style="color: #268bd2;">a b</span> : nat, a &lt;= b -&gt; a &lt; b
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org44e0e6f" class="outline-4">
+<h4 id="org44e0e6f"><span class="section-number-4">1.8.53</span> <span class="todo TODO">TODO</span> Functional induction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span>&#xa0;<span class="induction">induction</span></span></h4>
+<div class="outline-text-4" id="text-1-8-53">
+<pre class="example">
+[15:39:19] &lt;dschoepe&gt; Just in case people don't know about this feature, but Coq can auto-generate induction principles following the "shape" of a function. Then the previous lemma can be proven like this as well:
+[15:39:19] &lt;dschoepe&gt; ```Functional Scheme ins_ind := Induction for ins Sort Prop.
+[15:39:19] &lt;dschoepe&gt; Functional Scheme balance_ind := Induction for balance Sort Prop.
+[15:39:19] &lt;dschoepe&gt; Lemma ins_not_E': forall x vx s, ins x vx s &lt;&gt; E.
+[15:39:19] &lt;dschoepe&gt; Proof.
+[15:39:19] &lt;dschoepe&gt;   unfold not.
+[15:39:19] &lt;dschoepe&gt;   intros x vx s He.
+[15:39:19] &lt;dschoepe&gt;   functional induction (ins x vx s); eauto; try discriminate;
+[15:39:19] &lt;dschoepe&gt;   match goal with
+[15:39:19] &lt;dschoepe&gt;   | [ H : balance ?a ?b ?c ?d ?e = _ |- _ ] =&gt;
+[15:39:19] &lt;dschoepe&gt;     functional induction (balance a b c d e);
+[15:39:19] &lt;dschoepe&gt;     try discriminate; eauto
+[15:39:19] &lt;dschoepe&gt;   end.
+[15:39:19] &lt;dschoepe&gt; Qed.
+[15:39:19] &lt;dschoepe&gt; ```
+[15:39:19] &lt;dschoepe&gt; Not shorter than the automation from the lecture but it requires less thinking, arguably.
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org2c12c5e" class="outline-4">
+<h4 id="org2c12c5e"><span class="section-number-4">1.8.54</span> match reverse&#xa0;&#xa0;&#xa0;<span class="tag"><span class="ltac">ltac</span></span></h4>
+<div class="outline-text-4" id="text-1-8-54">
+<p>
+<code>match reverse goal with</code> matches hypothesis in the reverse order
+from a regular match.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Ltac</span> <span style="color: #268bd2;">test_ltac</span> :=
+  <span style="color: #b58900;">match</span> goal <span style="color: #b58900;">with</span>
+  | H : _ |- _ =&gt; <span style="color: #00008b;">idtac</span> H
+  <span style="color: #b58900;">end</span>.
+
+<span style="color: #859900;">Ltac</span> <span style="color: #268bd2;">test_ltac_rev</span> :=
+  <span style="color: #b58900;">match</span> reverse goal <span style="color: #b58900;">with</span>
+  | H : _ |- _ =&gt; <span style="color: #00008b;">idtac</span> H
+  <span style="color: #b58900;">end</span>.
+
+<span style="color: #859900;">Theorem</span> <span style="color: #268bd2;">foo</span> :
+  <span style="color: #b58900;">forall</span> (<span style="color: #268bd2;">A B</span> : <span style="color: #b58900;">Prop</span>), <span style="color: #b58900;">True</span>.
+<span style="color: #859900;">Proof</span>.
+  <span style="color: #00008b;">intros</span> A B.
+  test_ltac.
+  test_ltac_rev.
+<span style="color: #859900;">Qed</span>.
+</pre>
+</div>
+
+<p>
+This will print <code>B</code> when <code>test_ltac</code> is run, and <code>A</code> when
+<code>test_ltac_rev</code> is run.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0ad365" class="outline-4">
+<h4 id="orgc0ad365"><span class="section-number-4">1.8.55</span> Notations for repeated patterns (like lists)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="notation">notation</span></span></h4>
+<div class="outline-text-4" id="text-1-8-55">
+<p>
+<a href="https://coq.inria.fr/distrib/current/refman/user-extensions/syntax-extensions.html#notations-with-recursive-patterns">https://coq.inria.fr/distrib/current/refman/user-extensions/syntax-extensions.html#notations-with-recursive-patterns</a>
+</p>
+
+<p>
+<code>..</code> in notations lets you define repeated patterns that get expanded.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgebc0950" class="outline-4">
+<h4 id="orgebc0950"><span class="section-number-4">1.8.56</span> Proof with&#xa0;&#xa0;&#xa0;<span class="tag"><span class="tactics">tactics</span></span></h4>
+<div class="outline-text-4" id="text-1-8-56">
+<p>
+You can use <code>Proof with &lt;tactic&gt;</code> where <code>&lt;tactic&gt;</code> is replaced by
+some tactic to make proofs a bit shorter.
+</p>
+
+<p>
+<code>Proof with t</code> will cause <code>t1...</code> to behave like <code>t1; t</code>
+automatically. If you find yourself using <code>t</code> a lot in a proof,
+using <code>Proof with t</code> can make things shorter.
+</p>
+
+<p>
+Here's a small example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-coq"><span style="color: #859900;">Theorem</span> <span style="color: #268bd2;">easy_theorem</span>:
+  <span style="color: #b58900;">forall</span> A (<span style="color: #268bd2;">a</span> : A),
+    a = a.
+<span style="color: #859900;">Proof</span> <span style="color: #b58900;">with</span> <span style="color: #00008b;">auto</span>.
+  <span style="color: #00008b;">intros</span> A a...
+<span style="color: #859900;">Qed</span>.
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2018-06-09 Sat 20:21</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -71,6 +71,18 @@ tags: coq, tactics, theorem proving, proofs
 
    Then ~rewrite H~ will leave us with the goal ~y = y~, and
    ~rewrite <- H~ will leave us with ~x = x~.
+   
+** ~subst~
+
+   If you have
+
+   #+BEGIN_SRC coq
+   H : x = y
+   #+END_SRC
+
+   You can call ~subst~ and it will substitute all variable
+   equalities. This is a bit wild, but useful with other wild tactics
+   like ~inversion~
 
 ** ~apply~
 
